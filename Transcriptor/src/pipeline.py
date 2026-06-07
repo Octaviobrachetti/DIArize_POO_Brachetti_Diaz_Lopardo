@@ -1,5 +1,6 @@
 """Orquesta el proceso completo: transcripcion + alineacion + diarizacion + formateo."""
 
+import gc
 from pathlib import Path
 from typing import Optional
 
@@ -55,6 +56,16 @@ class PipelineDeTranscripcion:
         self.formateador = FormateadorDeTranscripcion(prefijo_hablante=prefijo_hablante)
         self.progreso = progreso or (lambda etapa, pct: None)
 
+    def _liberar_memoria(self):
+        """Fuerza la liberacion de memoria RAM/VRAM entre etapas."""
+        gc.collect()
+        try:
+            import torch
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
+        except Exception:
+            pass
+
     def ejecutar(self, ruta_audio: str) -> dict:
         """
         Ejecuta todo el pipeline.
@@ -70,11 +81,18 @@ class PipelineDeTranscripcion:
 
         # 1+2: transcripcion
         resultado, audio = self.transcriptor.transcribir(ruta_audio)
+        # Liberamos el modelo de Whisper antes de seguir: en GPUs de 4GB no entra
+        # Whisper + alineacion + diarizacion cargados a la vez (causa el error de
+        # memoria con large-v3). Cada etapa libera su modelo al terminar.
+        self.transcriptor.liberar()
+        self._liberar_memoria()
         self.progreso("Transcripcion lista", 40)
 
         # 3: alineacion
         self.progreso("Alineando timestamps", 45)
         resultado_alineado = self.alineador.alinear(resultado, audio)
+        self.alineador.liberar()
+        self._liberar_memoria()
         self.progreso("Alineacion lista", 65)
 
         # 4: diarizacion (opcional)

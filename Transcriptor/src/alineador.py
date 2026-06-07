@@ -39,3 +39,9 @@ class AlineadorDeHablantes:
             self.dispositivo,
             return_char_alignments=False,
         )
+
+    def liberar(self):
+        """Suelta el modelo de alineacion de la memoria (clave en GPUs de poca VRAM)."""
+        self._modelo = None
+        self._metadata = None
+        self._idioma_cargado = None
