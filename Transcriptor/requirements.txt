@@ -1,0 +1,8 @@
+# Transcriptor de audio con diarizacion + IA
+# Instalacion: pip install -r requirements.txt
+# Para torch con CUDA 12.8 (RTX 3050+) usar primero:
+#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+whisperx>=3.8.0
+PySide6>=6.6.0
+openai>=1.40.0
+python-dotenv>=1.0.0

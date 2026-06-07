@@ -1,0 +1,28 @@
+# Entorno virtual
+venv/
+.venv/
+
+# Variables de entorno (contienen tokens secretos!)
+.env
+
+# Archivos generados
+*.log
+*_transcripcion.txt
+*_resumen.txt
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+.claude/
+
+# PyInstaller (regenerable desde launcher.py)
+build/
+dist/
+*.spec
+
+# Modelos descargados (pesados)
+models/
+*.bin
+*.pt
