@@ -1,8 +1,24 @@
 # Transcriptor de audio con diarizacion + IA
 # Instalacion: pip install -r requirements.txt
-# Para torch con CUDA 12.8 (RTX 3050+) usar primero:
-#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
-whisperx>=3.8.0
+
+# Pipeline cloud (AssemblyAI) - transcripcion + diarizacion en la nube
+assemblyai>=0.30.0
+
+# GUI
 PySide6>=6.6.0
+
+# Grabacion de audio desde el microfono
+sounddevice>=0.4.6
+
+# Asistente IA (resumen, limpieza, analisis, Q&A) - opcional
 openai>=1.40.0
+
+# Utilidades
 python-dotenv>=1.0.0
+
+# Servidor HTTP para el cliente C++
+flask>=3.0.0
+
+# Pipeline local (alternativa offline, requiere GPU para velocidad aceptable):
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+# whisperx>=3.8.0

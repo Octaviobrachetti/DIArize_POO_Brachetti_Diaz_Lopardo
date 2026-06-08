@@ -6,7 +6,8 @@ import os
 from pathlib import Path
 from typing import Optional
 
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, QTimer, QUrl
+from PySide6.QtMultimedia import QAudioOutput, QMediaPlayer
 from PySide6.QtGui import QFont
 from PySide6.QtWidgets import (
     QApplication,
@@ -31,10 +32,6 @@ from PySide6.QtWidgets import (
 from src.asistente_ia import AsistenteIA
 from gui.worker import TareaWorker
 
-# Hardcodeado aca para evitar importar src.transcriptor (que arrastra whisperx/torch
-# al arranque). Debe coincidir con AudioTranscriber.MODELOS_DISPONIBLES.
-_MODELOS_DISPONIBLES = ["tiny", "base", "small", "medium", "large-v2", "large-v3"]
-
 
 class VentanaPrincipal(QMainWindow):
     def __init__(self):
@@ -44,10 +41,22 @@ class VentanaPrincipal(QMainWindow):
 
         self.ruta_audio: Optional[str] = None
         self.texto_original: str = ""
-        self.pipeline = None  # PipelineDeTranscripcion, se crea bajo demanda
+        self.pipeline = None
         self.ia: Optional[AsistenteIA] = None
         self.worker: Optional[TareaWorker] = None
-        self.historial_chat: list = []  # lista de (pregunta, respuesta)
+        self.historial_chat: list = []
+
+        self._grabador = None       # GrabadorDeAudio, lazy init
+        self._seg_grabando: int = 0
+        self._timer_rec = QTimer(self)
+        self._timer_rec.setInterval(1000)
+        self._timer_rec.timeout.connect(self._tick_grabacion)
+
+        self._player = QMediaPlayer(self)
+        self._audio_out = QAudioOutput(self)
+        self._player.setAudioOutput(self._audio_out)
+        self._audio_out.setVolume(1.0)
+        self._player.playbackStateChanged.connect(self._on_estado_reproduccion)
 
         self._construir_ui()
         self._aplicar_estilo()
@@ -68,15 +77,26 @@ class VentanaPrincipal(QMainWindow):
         self.btn_cargar.clicked.connect(self._cargar_audio)
         config_box.addWidget(self.btn_cargar)
 
+        self.btn_grabar = QPushButton("● Grabar")
+        self.btn_grabar.setObjectName("btn_grabar")
+        self.btn_grabar.clicked.connect(self._iniciar_grabacion)
+        config_box.addWidget(self.btn_grabar)
+
+        self.btn_detener_rec = QPushButton("■ Detener")
+        self.btn_detener_rec.setObjectName("btn_detener_rec")
+        self.btn_detener_rec.clicked.connect(self._detener_grabacion)
+        self.btn_detener_rec.setVisible(False)
+        config_box.addWidget(self.btn_detener_rec)
+
+        self.btn_reproducir = QPushButton("▶ Escuchar")
+        self.btn_reproducir.setObjectName("btn_reproducir")
+        self.btn_reproducir.clicked.connect(self._toggle_reproduccion)
+        self.btn_reproducir.setEnabled(False)
+        config_box.addWidget(self.btn_reproducir)
+
         self.lbl_archivo = QLabel("Ningun archivo seleccionado")
         self.lbl_archivo.setStyleSheet("color: #888;")
         config_box.addWidget(self.lbl_archivo, stretch=1)
-
-        config_box.addWidget(QLabel("Modelo:"))
-        self.combo_modelo = QComboBox()
-        self.combo_modelo.addItems(_MODELOS_DISPONIBLES)
-        self.combo_modelo.setCurrentText("medium")
-        config_box.addWidget(self.combo_modelo)
 
         config_box.addWidget(QLabel("Idioma:"))
         self.combo_idioma = QComboBox()
@@ -249,23 +269,102 @@ class VentanaPrincipal(QMainWindow):
             QLineEdit { border: 1px solid #cbd5e1; padding: 4px 6px; border-radius: 4px; }
             QProgressBar { border: 1px solid #cbd5e1; border-radius: 4px; text-align: center; }
             QProgressBar::chunk { background-color: #2563eb; }
+            QPushButton#btn_grabar {
+                background-color: #dc2626;
+            }
+            QPushButton#btn_grabar:hover:!disabled { background-color: #b91c1c; }
+            QPushButton#btn_detener_rec {
+                background-color: #dc2626;
+            }
+            QPushButton#btn_detener_rec:hover:!disabled { background-color: #b91c1c; }
+            QPushButton#btn_reproducir { background-color: #16a34a; }
+            QPushButton#btn_reproducir:hover:!disabled { background-color: #15803d; }
         """)
 
     # ------------------------------------------------------------------ AI
     def _cargar_ia_si_corresponde(self):
-        api_key = os.getenv("OPENAI_API_KEY", "")
-        if not api_key:
-            self._set_estado("Sin OPENAI_API_KEY en .env -- funciones IA deshabilitadas")
+        aai_key = os.getenv("ASSEMBLYAI_API_KEY", "")
+        oai_key = os.getenv("OPENAI_API_KEY", "")
+
+        if not aai_key:
+            self._set_estado(
+                "Sin ASSEMBLYAI_API_KEY en .env -- agregala para poder transcribir"
+            )
+        else:
+            self._set_estado("Listo. Carga un archivo de audio para empezar.")
+
+        if not oai_key:
             return
         try:
             self.ia = AsistenteIA(
-                api_key=api_key,
+                api_key=oai_key,
                 modelo=os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
             )
         except Exception as e:
             QMessageBox.warning(self, "Aviso", f"No se pudo inicializar OpenAI: {e}")
 
     # ------------------------------------------------------------------ acciones
+    def _toggle_reproduccion(self):
+        if self._player.playbackState() == QMediaPlayer.PlaybackState.PlayingState:
+            self._player.stop()
+        else:
+            self._player.setSource(QUrl.fromLocalFile(self.ruta_audio))
+            self._player.play()
+            self.btn_reproducir.setText("■ Parar")
+
+    def _on_estado_reproduccion(self, estado):
+        if estado != QMediaPlayer.PlaybackState.PlayingState:
+            self.btn_reproducir.setText("▶ Escuchar")
+
+    def _iniciar_grabacion(self):
+        from src.grabador import GrabadorDeAudio
+        if self._grabador is None:
+            self._grabador = GrabadorDeAudio()
+        try:
+            self._grabador.iniciar()
+        except Exception as e:
+            QMessageBox.critical(self, "Error de microfono", f"No se pudo acceder al microfono:\n{e}")
+            return
+
+        self._seg_grabando = 0
+        self._timer_rec.start()
+        self.btn_grabar.setVisible(False)
+        self.btn_detener_rec.setVisible(True)
+        self.btn_cargar.setEnabled(False)
+        self.btn_transcribir.setEnabled(False)
+        self.btn_reproducir.setEnabled(False)
+        self._player.stop()
+        self.lbl_archivo.setText("● Grabando  00:00")
+        self.lbl_archivo.setStyleSheet("color: #dc2626; font-weight: bold;")
+        self._set_estado("Grabando... presiona Detener cuando termines.")
+
+    def _tick_grabacion(self):
+        self._seg_grabando += 1
+        m, s = divmod(self._seg_grabando, 60)
+        self.lbl_archivo.setText(f"● Grabando  {m:02d}:{s:02d}")
+
+    def _detener_grabacion(self):
+        self._timer_rec.stop()
+        ruta = self._grabador.detener()
+        self.btn_detener_rec.setVisible(False)
+        self.btn_grabar.setVisible(True)
+        self.btn_cargar.setEnabled(True)
+
+        if not ruta:
+            self.lbl_archivo.setText("Grabacion vacia, intenta de nuevo")
+            self.lbl_archivo.setStyleSheet("color: #888;")
+            self._set_estado("Grabacion vacia.")
+            return
+
+        self.ruta_audio = ruta
+        m, s = divmod(self._seg_grabando, 60)
+        dur = f"{m:02d}:{s:02d}"
+        self.lbl_archivo.setText(f"Grabacion ({dur})")
+        self.lbl_archivo.setStyleSheet("color: #111;")
+        self.btn_transcribir.setEnabled(True)
+        self.btn_reproducir.setEnabled(True)
+        self._set_estado(f"Grabacion lista ({dur}). Podes escuchar o transcribir.")
+
     def _cargar_audio(self):
         ruta, _ = QFileDialog.getOpenFileName(
             self,
@@ -279,47 +378,40 @@ class VentanaPrincipal(QMainWindow):
         self.lbl_archivo.setText(Path(ruta).name)
         self.lbl_archivo.setStyleSheet("color: #111;")
         self.btn_transcribir.setEnabled(True)
+        self.btn_reproducir.setEnabled(True)
         self._set_estado(f"Archivo cargado: {Path(ruta).name}")
 
     def _transcribir(self):
         if not self.ruta_audio:
             return
 
-        hf_token = os.getenv("HF_TOKEN", "")
-        if not hf_token:
-            QMessageBox.warning(
+        api_key = os.getenv("ASSEMBLYAI_API_KEY", "")
+        if not api_key:
+            QMessageBox.critical(
                 self,
-                "Sin token HF",
-                "No hay HF_TOKEN en .env. La transcripcion va a salir SIN identificar hablantes.\n"
-                "Generá uno gratis en https://huggingface.co/settings/tokens",
+                "Sin API key",
+                "No hay ASSEMBLYAI_API_KEY en .env.\n"
+                "Obtene una gratis en https://www.assemblyai.com\n"
+                "y agregala al archivo .env como:\nASSEMBLYAI_API_KEY=tu_key_aqui",
             )
+            return
 
-        # Lazy import: torch + whisperx pesan varios GB y tardan minutos en cargar.
-        # Solo los importamos cuando el usuario realmente va a transcribir.
-        self._set_estado("Cargando librerias de ML... (primera vez puede tardar)")
-        QApplication.processEvents()
-        import torch
-        from src.pipeline import PipelineDeTranscripcion
+        from src.pipeline_assemblyai import PipelineAssemblyAI
 
-        dispositivo = "cuda" if torch.cuda.is_available() else "cpu"
-        num, minh, maxh = self._config_hablantes()
+        num, _, _ = self._config_hablantes()
 
-        self.pipeline = PipelineDeTranscripcion(
-            modelo_whisper=self.combo_modelo.currentText(),
+        self.pipeline = PipelineAssemblyAI(
+            api_key=api_key,
             idioma=self.combo_idioma.currentText(),
-            hf_token=hf_token,
-            dispositivo=dispositivo,
             num_hablantes=num,
-            min_hablantes=minh,
-            max_hablantes=maxh,
         )
 
         self._desactivar_botones(True)
-        self.progress.setValue(0)
-        self._set_estado("Procesando audio... (puede tardar varios minutos)")
+        # Barra indeterminada (pulsante) mientras dura el procesamiento cloud
+        self.progress.setRange(0, 0)
+        self._set_estado("Conectando con AssemblyAI...")
 
         self.worker = TareaWorker(self.pipeline.ejecutar, self.ruta_audio)
-        # Inyectar callback de progreso ANTES del start para que llegue a la barra
         self.pipeline.progreso = lambda etapa, pct: self.worker.progreso.emit(etapa, pct)
         self.worker.progreso.connect(self._on_progreso)
         self.worker.terminado.connect(self._on_transcripcion_lista)
@@ -327,6 +419,8 @@ class VentanaPrincipal(QMainWindow):
         self.worker.start()
 
     def _on_progreso(self, etapa: str, pct: int):
+        if self.progress.maximum() == 0:
+            self.progress.setRange(0, 100)
         self.progress.setValue(pct)
         self._set_estado(etapa)
 
@@ -336,7 +430,7 @@ class VentanaPrincipal(QMainWindow):
 
         participacion = salida.get("participacion", {})
         if participacion:
-            partes = " | ".join(f"{n}: {c}" for n, c in participacion.items())
+            partes = " | ".join(f"{n}: {c}s" for n, c in participacion.items())
             self.lbl_participacion.setText(f"Participacion: {partes}")
         else:
             self.lbl_participacion.setText("")
@@ -347,11 +441,13 @@ class VentanaPrincipal(QMainWindow):
             self.btn_limpiar.setEnabled(True)
             self.btn_resumir.setEnabled(True)
             self.btn_analizar.setEnabled(True)
+        self.progress.setRange(0, 100)
         self.progress.setValue(100)
         self._set_estado("Transcripcion lista")
 
     def _on_error(self, msg: str):
         self._desactivar_botones(False)
+        self.progress.setRange(0, 100)
         self.progress.setValue(0)
         self._set_estado("Error en el procesamiento")
         QMessageBox.critical(self, "Error", msg)
@@ -359,6 +455,7 @@ class VentanaPrincipal(QMainWindow):
     def _desactivar_botones(self, procesando: bool):
         self.btn_transcribir.setEnabled(not procesando and bool(self.ruta_audio))
         self.btn_cargar.setEnabled(not procesando)
+        self.btn_grabar.setEnabled(not procesando)
         if procesando:
             self.btn_limpiar.setEnabled(False)
             self.btn_resumir.setEnabled(False)

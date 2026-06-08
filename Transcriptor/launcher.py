@@ -23,13 +23,21 @@ def main() -> int:
     else:
         base = Path(__file__).parent.resolve()
 
+    # Buscar venv primero al lado del .exe, luego un nivel arriba (estructura del repo)
     python_exe = base / "venv" / "Scripts" / "pythonw.exe"
+    if not python_exe.exists():
+        python_exe = base.parent / "venv" / "Scripts" / "pythonw.exe"
+
     script = base / "main_gui.py"
 
     if not python_exe.exists():
         _error(
-            f"No se encontro el entorno virtual:\n{python_exe}\n\n"
-            "Asegurate de tener la carpeta 'venv' al lado del Transcriptor.exe."
+            f"No se encontro el entorno virtual.\n\n"
+            "Buscado en:\n"
+            f"  {base / 'venv'}\n"
+            f"  {base.parent / 'venv'}\n\n"
+            "Asegurate de tener la carpeta 'venv' al lado del Transcriptor.exe "
+            "o en la carpeta que lo contiene."
         )
         return 1
 
