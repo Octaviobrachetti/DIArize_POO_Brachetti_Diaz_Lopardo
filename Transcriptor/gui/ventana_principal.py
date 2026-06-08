@@ -3,12 +3,20 @@
 from __future__ import annotations
 
 import os
+import tempfile
 from pathlib import Path
 from typing import Optional
 
 from PySide6.QtCore import Qt, QTimer, QUrl
-from PySide6.QtMultimedia import QAudioOutput, QMediaPlayer
 from PySide6.QtGui import QFont
+from PySide6.QtMultimedia import (
+    QAudioInput,
+    QAudioOutput,
+    QMediaCaptureSession,
+    QMediaDevices,
+    QMediaPlayer,
+    QMediaRecorder,
+)
 from PySide6.QtWidgets import (
     QApplication,
     QComboBox,
@@ -58,6 +66,15 @@ class VentanaPrincipal(QMainWindow):
         self._audio_out.setVolume(1.0)
         self._player.playbackStateChanged.connect(self._on_estado_reproduccion)
 
+        # Grabacion de audio (QtMultimedia); se inicializa la primera vez que se usa
+        self._captura = None
+        self._audio_input = None
+        self._grabador = None
+
+        # Reproduccion de audio (QtMultimedia); se inicializa al primer uso
+        self._player = None
+        self._audio_output = None
+
         self._construir_ui()
         self._aplicar_estilo()
         self._cargar_ia_si_corresponde()
@@ -103,41 +120,19 @@ class VentanaPrincipal(QMainWindow):
         self.combo_idioma.addItems(["es", "en", "pt", "fr", "it", "de"])
         config_box.addWidget(self.combo_idioma)
 
-        # --- Configuracion de hablantes (clave para que la diarizacion no falle) ---
-        config_box.addWidget(QLabel("Hablantes:"))
-        self.combo_modo_hablantes = QComboBox()
-        self.combo_modo_hablantes.addItems(["Automatico", "Cantidad exacta", "Rango (min-max)"])
-        self.combo_modo_hablantes.setToolTip(
-            "Automatico: dejá que el modelo adivine (puede fallar con 3+ personas).\n"
-            "Cantidad exacta: si sabés cuántos hablan, esto da el mejor resultado.\n"
-            "Rango: si no estás seguro, acotá un minimo y maximo (ej: 2 a 4)."
+        # --- Cantidad de personas (la fija el usuario; NO hay modo automatico
+        #     porque la deteccion automatica funciona mal) ---
+        config_box.addWidget(QLabel("Cantidad de personas:"))
+        self.spin_personas = QSpinBox()
+        self.spin_personas.setRange(1, 10)
+        self.spin_personas.setValue(2)
+        self.spin_personas.setToolTip(
+            "Indicá cuantas personas hablan en el audio.\n"
+            "Decirle el numero exacto da la mejor diarizacion."
         )
-        self.combo_modo_hablantes.currentIndexChanged.connect(self._actualizar_modo_hablantes)
-        config_box.addWidget(self.combo_modo_hablantes)
-
-        self.lbl_exacto = QLabel("N:")
-        config_box.addWidget(self.lbl_exacto)
-        self.spin_exacto = QSpinBox()
-        self.spin_exacto.setRange(1, 10)
-        self.spin_exacto.setValue(2)
-        config_box.addWidget(self.spin_exacto)
-
-        self.lbl_min = QLabel("min:")
-        config_box.addWidget(self.lbl_min)
-        self.spin_min = QSpinBox()
-        self.spin_min.setRange(1, 10)
-        self.spin_min.setValue(2)
-        config_box.addWidget(self.spin_min)
-
-        self.lbl_max = QLabel("max:")
-        config_box.addWidget(self.lbl_max)
-        self.spin_max = QSpinBox()
-        self.spin_max.setRange(1, 10)
-        self.spin_max.setValue(4)
-        config_box.addWidget(self.spin_max)
+        config_box.addWidget(self.spin_personas)
 
         layout.addLayout(config_box)
-        self._actualizar_modo_hablantes()  # estado inicial (Automatico: oculta spinboxes)
 
         # --- Boton transcribir + progreso ---
         accion_box = QHBoxLayout()
@@ -232,26 +227,81 @@ class VentanaPrincipal(QMainWindow):
         l.addWidget(area, stretch=1)
         return w
 
-    def _actualizar_modo_hablantes(self):
-        """Muestra/oculta los spinboxes segun el modo elegido (0=auto, 1=exacta, 2=rango)."""
-        modo = self.combo_modo_hablantes.currentIndex()
-        exacto = (modo == 1)
-        rango = (modo == 2)
-        self.lbl_exacto.setVisible(exacto)
-        self.spin_exacto.setVisible(exacto)
-        for w in (self.lbl_min, self.spin_min, self.lbl_max, self.spin_max):
-            w.setVisible(rango)
+    # ------------------------------------------------------------------ grabacion
+    def _init_grabador(self) -> bool:
+        """Inicializa el grabador la primera vez. Devuelve False si no hay microfono."""
+        if self._grabador is not None:
+            return True
+        if not QMediaDevices.audioInputs():
+            QMessageBox.warning(self, "Sin microfono",
+                                "No se detecto ningun microfono en el sistema.")
+            return False
+        self._captura = QMediaCaptureSession()
+        self._audio_input = QAudioInput()
+        self._captura.setAudioInput(self._audio_input)
+        self._grabador = QMediaRecorder()
+        self._captura.setRecorder(self._grabador)
+        self._grabador.recorderStateChanged.connect(self._on_grabador_estado)
+        self._grabador.errorOccurred.connect(
+            lambda err, cad: QMessageBox.critical(self, "Error de grabacion", cad)
+        )
+        return True
 
-    def _config_hablantes(self):
-        """Devuelve (num, min, max) para pasar al pipeline segun el modo elegido."""
-        modo = self.combo_modo_hablantes.currentIndex()
-        if modo == 1:  # cantidad exacta
-            return self.spin_exacto.value(), None, None
-        if modo == 2:  # rango
-            mn = self.spin_min.value()
-            mx = max(mn, self.spin_max.value())  # garantiza max >= min
-            return None, mn, mx
-        return None, None, None  # automatico
+    def _grabando(self) -> bool:
+        return (self._grabador is not None
+                and self._grabador.recorderState() == QMediaRecorder.RecorderState.RecordingState)
+
+    def _on_grabador_estado(self, estado):
+        if estado == QMediaRecorder.RecorderState.RecordingState:
+            self.btn_grabar.setText("■ Detener")
+            self.btn_cargar.setEnabled(False)
+            self.btn_transcribir.setEnabled(False)
+            self._set_estado("Grabando... apretá Detener cuando termines.")
+        elif estado == QMediaRecorder.RecorderState.StoppedState:
+            self.btn_grabar.setText("● Grabar")
+            self.btn_cargar.setEnabled(True)
+            ruta = self._grabador.actualLocation().toLocalFile()
+            if ruta and Path(ruta).exists():
+                self.ruta_audio = ruta
+                self.lbl_archivo.setText(f"{Path(ruta).name} (grabado)")
+                self.lbl_archivo.setStyleSheet("color: #111;")
+                self.btn_transcribir.setEnabled(True)
+                self.btn_reproducir.setEnabled(True)
+                self._set_estado(f"Grabacion lista: {Path(ruta).name}")
+            else:
+                self._set_estado("No se pudo guardar la grabacion.")
+
+    # ------------------------------------------------------------------ reproduccion
+    def _init_player(self):
+        """Inicializa el reproductor la primera vez que se usa."""
+        if self._player is not None:
+            return
+        self._audio_output = QAudioOutput()
+        self._player = QMediaPlayer()
+        self._player.setAudioOutput(self._audio_output)
+        self._player.playbackStateChanged.connect(self._on_player_estado)
+
+    def _toggle_reproduccion(self):
+        """Reproduce el audio cargado/grabado, o lo detiene si ya esta sonando."""
+        if not self.ruta_audio:
+            return
+        self._init_player()
+        if self._player.playbackState() == QMediaPlayer.PlaybackState.PlayingState:
+            self._player.stop()
+        else:
+            self._player.setSource(QUrl.fromLocalFile(self.ruta_audio))
+            self._player.play()
+
+    def _on_player_estado(self, estado):
+        if estado == QMediaPlayer.PlaybackState.PlayingState:
+            self.btn_reproducir.setText("■ Detener")
+        else:
+            self.btn_reproducir.setText("▶ Escuchar")
+
+    def _detener_reproduccion(self):
+        """Frena la reproduccion si esta sonando (al cargar otro audio o transcribir)."""
+        if self._player is not None:
+            self._player.stop()
 
     def _aplicar_estilo(self):
         self.setStyleSheet("""
@@ -301,21 +351,9 @@ class VentanaPrincipal(QMainWindow):
                 modelo=os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
             )
         except Exception as e:
-            QMessageBox.warning(self, "Aviso", f"No se pudo inicializar OpenAI: {e}")
+            QMessageBox.warning(self, "Aviso", f"No se pudo inicializar la IA: {e}")
 
     # ------------------------------------------------------------------ acciones
-    def _toggle_reproduccion(self):
-        if self._player.playbackState() == QMediaPlayer.PlaybackState.PlayingState:
-            self._player.stop()
-        else:
-            self._player.setSource(QUrl.fromLocalFile(self.ruta_audio))
-            self._player.play()
-            self.btn_reproducir.setText("■ Parar")
-
-    def _on_estado_reproduccion(self, estado):
-        if estado != QMediaPlayer.PlaybackState.PlayingState:
-            self.btn_reproducir.setText("▶ Escuchar")
-
     def _iniciar_grabacion(self):
         from src.grabador import GrabadorDeAudio
         if self._grabador is None:
@@ -333,7 +371,7 @@ class VentanaPrincipal(QMainWindow):
         self.btn_cargar.setEnabled(False)
         self.btn_transcribir.setEnabled(False)
         self.btn_reproducir.setEnabled(False)
-        self._player.stop()
+        self._detener_reproduccion()
         self.lbl_archivo.setText("● Grabando  00:00")
         self.lbl_archivo.setStyleSheet("color: #dc2626; font-weight: bold;")
         self._set_estado("Grabando... presiona Detener cuando termines.")
@@ -374,6 +412,7 @@ class VentanaPrincipal(QMainWindow):
         )
         if not ruta:
             return
+        self._detener_reproduccion()
         self.ruta_audio = ruta
         self.lbl_archivo.setText(Path(ruta).name)
         self.lbl_archivo.setStyleSheet("color: #111;")
@@ -383,6 +422,10 @@ class VentanaPrincipal(QMainWindow):
 
     def _transcribir(self):
         if not self.ruta_audio:
+            return
+        if self._grabando():
+            QMessageBox.information(self, "Grabando",
+                                    "Detené la grabacion antes de transcribir.")
             return
 
         api_key = os.getenv("ASSEMBLYAI_API_KEY", "")
@@ -444,23 +487,41 @@ class VentanaPrincipal(QMainWindow):
         self.progress.setRange(0, 100)
         self.progress.setValue(100)
         self._set_estado("Transcripcion lista")
+        self._liberar_pipeline()
 
     def _on_error(self, msg: str):
         self._desactivar_botones(False)
         self.progress.setRange(0, 100)
         self.progress.setValue(0)
         self._set_estado("Error en el procesamiento")
+        self._liberar_pipeline()
         QMessageBox.critical(self, "Error", msg)
+
+    def _liberar_pipeline(self):
+        try:
+            if self.pipeline is not None:
+                self.pipeline.liberar_todo()
+        except Exception:
+            pass
+        self.pipeline = None
+        import gc
+        gc.collect()
 
     def _desactivar_botones(self, procesando: bool):
         self.btn_transcribir.setEnabled(not procesando and bool(self.ruta_audio))
         self.btn_cargar.setEnabled(not procesando)
         self.btn_grabar.setEnabled(not procesando)
+        self.btn_reproducir.setEnabled(not procesando and bool(self.ruta_audio))
         if procesando:
+            self._detener_reproduccion()
             self.btn_limpiar.setEnabled(False)
             self.btn_resumir.setEnabled(False)
             self.btn_analizar.setEnabled(False)
             self.btn_guardar.setEnabled(False)
+
+    def _config_hablantes(self):
+        n = self.spin_personas.value()
+        return n, n, n
 
     # ----- IA actions -----
     def _accion_ia(self, metodo, area_destino: QTextEdit, etiqueta: str):
@@ -510,7 +571,6 @@ class VentanaPrincipal(QMainWindow):
         self.worker.start()
 
     def _on_respuesta(self, pregunta: str, respuesta: str):
-        # Reemplazar "Pensando..." con la respuesta
         contenido = self.txt_chat.toHtml()
         contenido = contenido.replace("<i>Pensando...</i>", "")
         self.txt_chat.setHtml(contenido)

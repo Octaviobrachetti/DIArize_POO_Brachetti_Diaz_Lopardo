@@ -60,3 +60,7 @@ class DiarizadorDeHablantes:
         n = diarize_df["speaker"].nunique()
         print(f"[Diarizador] Hablantes detectados: {n}")
         return diarize_df
+
+    def liberar(self):
+        """Suelta el modelo de diarizacion de la memoria (clave en GPUs de poca VRAM)."""
+        self._pipeline = None

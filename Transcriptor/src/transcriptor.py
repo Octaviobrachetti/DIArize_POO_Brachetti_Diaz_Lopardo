@@ -37,8 +37,21 @@ class AudioTranscriber:
         self.dispositivo = dispositivo
         self.idioma = idioma
         self.batch_size = batch_size
-        self.compute_type = compute_type or ("float16" if dispositivo == "cuda" else "int8")
+        self.compute_type = compute_type or self._compute_type_auto(modelo_whisper, dispositivo)
         self._pipeline = None
+
+    @staticmethod
+    def _compute_type_auto(modelo: str, dispositivo: str) -> str:
+        """
+        Elige la precision segun el modelo y el dispositivo.
+        Los modelos 'large' en float16 no entran en GPUs de 4GB (error de memoria);
+        para ellos usamos int8_float16, que pesa la mitad y casi no pierde calidad.
+        """
+        if dispositivo != "cuda":
+            return "int8"  # CPU
+        if modelo.startswith("large"):
+            return "int8_float16"  # GPU con poca VRAM
+        return "float16"  # GPU, modelos chicos/medianos
 
     def cargar_modelo(self):
         """Carga el modelo de Whisper en memoria (puede demorar la primera vez)."""
@@ -73,3 +86,7 @@ class AudioTranscriber:
         idioma_detectado = resultado.get("language", self.idioma or "desconocido")
         print(f"[Whisper] Idioma: {idioma_detectado} | Segmentos: {len(resultado['segments'])}")
         return resultado, audio
+
+    def liberar(self):
+        """Suelta el modelo de la memoria (clave en GPUs de poca VRAM)."""
+        self._pipeline = None
