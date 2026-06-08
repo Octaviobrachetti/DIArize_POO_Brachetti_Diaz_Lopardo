@@ -1,0 +1,119 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "nucleo",
+					"jsonFile" : "directory-nucleo-Debug-c23e859a43af730de1a5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "nucleo",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "app",
+					"jsonFile" : "directory-app-Debug-7ab44524cbd5ada90c6a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "app",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "DIArize",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "DIArizeCpp::@5f5a17c01335469806cb",
+					"jsonFile" : "target-DIArizeCpp-Debug-64d254b73798eb06361c.json",
+					"name" : "DIArizeCpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "DIArizeCpp_autogen::@5f5a17c01335469806cb",
+					"jsonFile" : "target-DIArizeCpp_autogen-Debug-7949327c1717b08b7d70.json",
+					"name" : "DIArizeCpp_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "DIArizeCpp_autogen_timestamp_deps::@5f5a17c01335469806cb",
+					"jsonFile" : "target-DIArizeCpp_autogen_timestamp_deps-Debug-081a219f80489c2aefe6.json",
+					"name" : "DIArizeCpp_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "nucleo::@a0d1946f8a15a1afde01",
+					"jsonFile" : "target-nucleo-Debug-82e4b897788c9ceb77d2.json",
+					"name" : "nucleo",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug",
+		"source" : "C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

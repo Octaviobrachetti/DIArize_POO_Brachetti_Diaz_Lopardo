@@ -1,0 +1,10 @@
+C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/nucleo/CMakeFiles/nucleo.dir
+C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/nucleo/CMakeFiles/edit_cache.dir
+C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/nucleo/CMakeFiles/rebuild_cache.dir
+C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/app/CMakeFiles/DIArizeCpp.dir
+C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/app/CMakeFiles/edit_cache.dir
+C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/app/CMakeFiles/rebuild_cache.dir
+C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/app/CMakeFiles/DIArizeCpp_autogen_timestamp_deps.dir
+C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/app/CMakeFiles/DIArizeCpp_autogen.dir

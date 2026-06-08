@@ -1,0 +1,2 @@
+C:\Qt\Tools\mingw1310_64\bin\ar.exe qc libnucleo.a CMakeFiles/nucleo.dir/src/Hablante.cpp.obj CMakeFiles/nucleo.dir/src/Segmento.cpp.obj CMakeFiles/nucleo.dir/src/Transcripcion.cpp.obj
+C:\Qt\Tools\mingw1310_64\bin\ranlib.exe libnucleo.a
