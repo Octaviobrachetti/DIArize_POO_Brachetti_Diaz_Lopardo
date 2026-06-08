@@ -63,8 +63,40 @@ class PipelineDeTranscripcion:
             import torch
             if torch.cuda.is_available():
                 torch.cuda.empty_cache()
+                torch.cuda.ipc_collect()
         except Exception:
             pass
+
+    def _con_fallback_cpu(self, componente, funcion, nombre_etapa, pct=50):
+        """
+        Ejecuta una etapa (alineacion/diarizacion) en su dispositivo actual.
+        Si la GPU falla por un error de cuDNN/CUDA (ej: 'unable to find an engine'
+        o 'out of memory'), libera memoria, cambia ese componente a CPU y reintenta.
+        En CPU es mas lento pero no falla.
+        """
+        try:
+            return funcion()
+        except RuntimeError as e:
+            if componente.dispositivo == "cpu":
+                raise  # ya estabamos en CPU, no hay a donde caer: propagamos
+            print(f"[Pipeline] La {nombre_etapa} fallo en GPU ({e}). Reintentando en CPU...")
+            self.progreso(f"GPU sin memoria: {nombre_etapa} en CPU (mas lento)", pct)
+            componente.liberar()
+            self._liberar_memoria()
+            componente.dispositivo = "cpu"
+            return funcion()
+
+    def liberar_todo(self):
+        """
+        Vacia por completo la memoria de TODOS los modelos (Whisper, alineador y
+        diarizador). Se llama al terminar cada audio para que la VRAM quede limpia
+        y no se acumule entre corridas.
+        """
+        self.transcriptor.liberar()
+        self.alineador.liberar()
+        if self.diarizador is not None:
+            self.diarizador.liberar()
+        self._liberar_memoria()
 
     def ejecutar(self, ruta_audio: str) -> dict:
         """
@@ -79,43 +111,51 @@ class PipelineDeTranscripcion:
         ruta_audio = str(Path(ruta_audio))
         self.progreso("Cargando modelo Whisper", 5)
 
-        # 1+2: transcripcion
-        resultado, audio = self.transcriptor.transcribir(ruta_audio)
-        # Liberamos el modelo de Whisper antes de seguir: en GPUs de 4GB no entra
-        # Whisper + alineacion + diarizacion cargados a la vez (causa el error de
-        # memoria con large-v3). Cada etapa libera su modelo al terminar.
-        self.transcriptor.liberar()
-        self._liberar_memoria()
-        self.progreso("Transcripcion lista", 40)
+        try:
+            # 1+2: transcripcion
+            resultado, audio = self.transcriptor.transcribir(ruta_audio)
+            # Liberamos el modelo de Whisper antes de seguir: en GPUs de 4GB no entra
+            # Whisper + alineacion + diarizacion cargados a la vez (causa el error de
+            # memoria con large-v3). Cada etapa libera su modelo al terminar.
+            self.transcriptor.liberar()
+            self._liberar_memoria()
+            self.progreso("Transcripcion lista", 40)
 
-        # 3: alineacion
-        self.progreso("Alineando timestamps", 45)
-        resultado_alineado = self.alineador.alinear(resultado, audio)
-        self.alineador.liberar()
-        self._liberar_memoria()
-        self.progreso("Alineacion lista", 65)
-
-        # 4: diarizacion (opcional)
-        if self.diarizador is not None:
-            self.progreso("Identificando hablantes", 70)
-            diarize_df = self.diarizador.diarizar(audio)
-            # fill_nearest=True: a los segmentos que caen en un hueco de la
-            # diarizacion (comun con 3+ personas y turnos rapidos) les asigna
-            # el hablante mas cercano en vez de dejarlos sin etiqueta ("Persona ?").
-            resultado_final = whisperx.assign_word_speakers(
-                diarize_df, resultado_alineado, fill_nearest=True
+            # 3: alineacion (con fallback a CPU si la GPU falla por cuDNN/memoria)
+            self.progreso("Alineando timestamps", 45)
+            resultado_alineado = self._con_fallback_cpu(
+                self.alineador, lambda: self.alineador.alinear(resultado, audio),
+                "alineacion", pct=45
             )
-            self.progreso("Diarizacion lista", 90)
-        else:
-            resultado_final = resultado_alineado
+            self.alineador.liberar()
+            self._liberar_memoria()
+            self.progreso("Alineacion lista", 65)
 
-        # 5: formateo
-        texto = self.formateador.formatear(resultado_final)
-        participacion = self.formateador.resumen_participacion(resultado_final)
-        self.progreso("Listo", 100)
+            # 4: diarizacion (opcional, con fallback a CPU)
+            if self.diarizador is not None:
+                self.progreso("Identificando hablantes", 70)
+                diarize_df = self._con_fallback_cpu(
+                    self.diarizador, lambda: self.diarizador.diarizar(audio),
+                    "diarizacion", pct=70
+                )
+                self.diarizador.liberar()
+                self._liberar_memoria()
+                resultado_final = whisperx.assign_word_speakers(diarize_df, resultado_alineado)
+                self.progreso("Diarizacion lista", 90)
+            else:
+                resultado_final = resultado_alineado
 
-        return {
-            "texto": texto,
-            "resultado": resultado_final,
-            "participacion": participacion,
-        }
+            # 5: formateo
+            texto = self.formateador.formatear(resultado_final)
+            participacion = self.formateador.resumen_participacion(resultado_final)
+            self.progreso("Listo", 100)
+
+            return {
+                "texto": texto,
+                "resultado": resultado_final,
+                "participacion": participacion,
+            }
+        finally:
+            # Pase lo que pase (exito o error) dejamos la memoria limpia para el
+            # proximo audio: vacia VRAM/RAM de todos los modelos.
+            self.liberar_todo()

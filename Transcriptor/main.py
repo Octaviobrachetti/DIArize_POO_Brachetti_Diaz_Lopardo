@@ -104,7 +104,11 @@ def main():
         if not openai_key:
             print("\n[Aviso] No hay OPENAI_API_KEY en .env -- se saltea el procesamiento IA")
         else:
-            ia = AsistenteIA(api_key=openai_key, modelo=os.getenv("OPENAI_MODEL", "gpt-4o-mini"))
+            ia = AsistenteIA(
+                api_key=openai_key,
+                modelo=os.getenv("OPENAI_MODEL", "gemini-2.5-flash"),
+                base_url=os.getenv("OPENAI_BASE_URL", "https://generativelanguage.googleapis.com/v1beta/openai/"),
+            )
             if args.limpiar:
                 print("\n[IA] Limpiando texto...")
                 texto_limpio = ia.limpiar(texto)

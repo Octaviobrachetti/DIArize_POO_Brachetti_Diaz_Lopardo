@@ -49,14 +49,24 @@ class AsistenteIA:
         "no esta en el audio, deci 'No se mencionó en el audio'. Responde en espanol, breve."
     )
 
-    def __init__(self, api_key: str, modelo: str = "gpt-4o-mini"):
+    def __init__(
+        self,
+        api_key: str,
+        modelo: str = "gemini-2.5-flash",
+        base_url: str = "https://generativelanguage.googleapis.com/v1beta/openai/",
+    ):
+        """
+        Cliente LLM. Por defecto usa Google Gemini a traves de su endpoint
+        compatible con OpenAI (gratis). Para usar OpenAI real, pasar base_url=None
+        y un modelo tipo 'gpt-4o-mini'.
+        """
         if not api_key:
             raise ValueError(
-                "Se necesita una API key de OpenAI. "
-                "Crea una en https://platform.openai.com/api-keys y ponela en .env"
+                "Se necesita una API key. Para Gemini (gratis) creala en "
+                "https://aistudio.google.com/app/apikey y ponela en .env (OPENAI_API_KEY)."
             )
         self.modelo = modelo
-        self._cliente = OpenAI(api_key=api_key)
+        self._cliente = OpenAI(api_key=api_key, base_url=base_url) if base_url else OpenAI(api_key=api_key)
 
     def _chat(self, instruccion_sistema: str, contenido_usuario: str, temperatura: float = 0.3) -> str:
         respuesta = self._cliente.chat.completions.create(
