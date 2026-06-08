@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\"c:\\\\Users\\\\frand\\\\Desktop\\\\Facu\\\\Tercer Año\\\\POO\\\\DIArize_POO_Brachetti_Diaz_Lopardo\\\\venv\\\\Scripts\\\\pip.exe\" show assemblyai)",
+      "Bash(\"c:\\\\Users\\\\frand\\\\Desktop\\\\Facu\\\\Tercer Año\\\\POO\\\\DIArize_POO_Brachetti_Diaz_Lopardo\\\\venv\\\\Scripts\\\\pip.exe\" install sounddevice --quiet)",
+      "Bash(\"c:\\\\Users\\\\frand\\\\Desktop\\\\Facu\\\\Tercer Año\\\\POO\\\\DIArize_POO_Brachetti_Diaz_Lopardo\\\\venv\\\\Scripts\\\\pip.exe\" show sounddevice)",
+      "Bash(\"c:\\\\Users\\\\frand\\\\Desktop\\\\Facu\\\\Tercer Año\\\\POO\\\\DIArize_POO_Brachetti_Diaz_Lopardo\\\\venv\\\\Scripts\\\\pip.exe\" install flask --quiet)",
+      "Bash(\"c:\\\\Users\\\\frand\\\\Desktop\\\\Facu\\\\Tercer Año\\\\POO\\\\DIArize_POO_Brachetti_Diaz_Lopardo\\\\venv\\\\Scripts\\\\python.exe\" servidor.py)",
+      "Bash(curl -s http://localhost:8765/estado)",
+      "Read(//c/Users/frand/Desktop/DIARIZE/cliente_cpp/nucleo/src/**)",
+      "Read(//c/Users/frand/Desktop/DIARIZE/cliente_cpp/nucleo/**)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\frand\\Desktop\\DIARIZE\\cliente_cpp\\nucleo\\include\\nucleo",
+      "C:\\Users\\frand\\Desktop\\DIARIZE\\cliente_cpp\\nucleo\\src"
+    ]
+  }
+}

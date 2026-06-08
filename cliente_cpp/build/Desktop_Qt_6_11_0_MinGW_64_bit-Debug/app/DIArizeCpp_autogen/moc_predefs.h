@@ -243,6 +243,7 @@
 #define __DEC128_MIN_EXP__ (-6142)
 #define __DEC128_MAX__ 9.999999999999999999999999999999999E6144DL
 #define __INT_FAST32_TYPE__ int
+#define QT_CONCURRENT_LIB 1
 #define __UINT_LEAST16_TYPE__ short unsigned int
 #define __DEC128_MAX_EXP__ 6145
 #define __DBL_HAS_DENORM__ 1
@@ -261,6 +262,7 @@
 #define __LDBL_EPSILON__ 1.08420217248550443400745280086994171e-19L
 #define __UINTMAX_C(c) c ## ULL
 #define __FLT16_DIG__ 3
+#define QT_MULTIMEDIA_LIB 1
 #define __FLT32X_MIN__ 2.22507385850720138309023271733240406e-308F32x
 #define __SIG_ATOMIC_MAX__ 0x7fffffff
 #define __cpp_constexpr 201603L
@@ -351,6 +353,7 @@
 #define __FLT64X_MAX_EXP__ 16384
 #define __UINT_FAST64_TYPE__ long long unsigned int
 #define __cpp_inline_variables 201606L
+#define QT_WEBSOCKETS_LIB 1
 #define __BFLT16_MIN_EXP__ (-125)
 #define __INT_MAX__ 0x7fffffff
 #define WIN32 1

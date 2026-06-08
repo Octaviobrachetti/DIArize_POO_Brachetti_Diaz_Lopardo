@@ -1,5 +1,0 @@
-C:/Users/octav/OneDrive/Escritorio/UBP/3ro/POO/Proyecto POO/TranscriptorCpp/build/CMakeFiles/TranscriptorCpp.dir
-C:/Users/octav/OneDrive/Escritorio/UBP/3ro/POO/Proyecto POO/TranscriptorCpp/build/CMakeFiles/edit_cache.dir
-C:/Users/octav/OneDrive/Escritorio/UBP/3ro/POO/Proyecto POO/TranscriptorCpp/build/CMakeFiles/rebuild_cache.dir
-C:/Users/octav/OneDrive/Escritorio/UBP/3ro/POO/Proyecto POO/TranscriptorCpp/build/CMakeFiles/TranscriptorCpp_autogen_timestamp_deps.dir
-C:/Users/octav/OneDrive/Escritorio/UBP/3ro/POO/Proyecto POO/TranscriptorCpp/build/CMakeFiles/TranscriptorCpp_autogen.dir

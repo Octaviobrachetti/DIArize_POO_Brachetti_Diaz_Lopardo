@@ -85,7 +85,96 @@ DIArize::Core::Transcripcion ClienteTranscriptor::transcribir(
             s["texto"].toString().toStdString()));
     }
 
+    QJsonObject part = obj["participacion"].toObject();
+    for (auto it = part.begin(); it != part.end(); ++it) {
+        resultado.setParticipacion(it.key().toStdString(), it.value().toDouble());
+    }
+
     return resultado;
+}
+
+// ── IA: limpiar / resumir / analizar / preguntar ──────────────────────────
+
+RespuestaIA ClienteTranscriptor::_iaSimple(const QString& endpoint,
+                                           const std::string& texto) const
+{
+    QJsonObject body;
+    body["texto"] = QString::fromStdString(texto);
+    QByteArray json = QJsonDocument(body).toJson(QJsonDocument::Compact);
+
+    QByteArray resp = postJson(endpoint, json);
+    if (resp.isEmpty())
+        return {false, "Sin respuesta del servidor."};
+
+    QJsonObject obj = QJsonDocument::fromJson(resp).object();
+    if (obj.contains("resultado"))
+        return {true, obj["resultado"].toString().toStdString()};
+    if (obj.contains("error"))
+        return {false, obj["error"].toString().toStdString()};
+    return {false, "Respuesta inesperada del servidor."};
+}
+
+RespuestaIA ClienteTranscriptor::limpiar(const std::string& texto) const {
+    return _iaSimple("/limpiar", texto);
+}
+
+RespuestaIA ClienteTranscriptor::resumir(const std::string& texto) const {
+    return _iaSimple("/resumir", texto);
+}
+
+RespuestaIA ClienteTranscriptor::analizar(const std::string& texto) const {
+    return _iaSimple("/analizar", texto);
+}
+
+RespuestaIA ClienteTranscriptor::traducir(const std::string& texto,
+                                           const std::string& idiomaDestino) const
+{
+    QJsonObject body;
+    body["texto"]          = QString::fromStdString(texto);
+    body["idioma_destino"] = QString::fromStdString(idiomaDestino);
+    QByteArray json = QJsonDocument(body).toJson(QJsonDocument::Compact);
+
+    QByteArray resp = postJson("/traducir", json);
+    if (resp.isEmpty())
+        return {false, "Sin respuesta del servidor."};
+
+    QJsonObject obj = QJsonDocument::fromJson(resp).object();
+    if (obj.contains("resultado"))
+        return {true, obj["resultado"].toString().toStdString()};
+    if (obj.contains("error"))
+        return {false, obj["error"].toString().toStdString()};
+    return {false, "Respuesta inesperada del servidor."};
+}
+
+RespuestaIA ClienteTranscriptor::preguntar(
+    const std::string& texto,
+    const std::string& pregunta,
+    const std::vector<std::pair<std::string,std::string>>& historial) const
+{
+    QJsonObject body;
+    body["texto"]    = QString::fromStdString(texto);
+    body["pregunta"] = QString::fromStdString(pregunta);
+
+    QJsonArray hist;
+    for (const auto& par : historial) {
+        QJsonArray dupla;
+        dupla.append(QString::fromStdString(par.first));
+        dupla.append(QString::fromStdString(par.second));
+        hist.append(dupla);
+    }
+    body["historial"] = hist;
+
+    QByteArray json = QJsonDocument(body).toJson(QJsonDocument::Compact);
+    QByteArray resp = postJson("/preguntar", json);
+    if (resp.isEmpty())
+        return {false, "Sin respuesta del servidor."};
+
+    QJsonObject obj = QJsonDocument::fromJson(resp).object();
+    if (obj.contains("resultado"))
+        return {true, obj["resultado"].toString().toStdString()};
+    if (obj.contains("error"))
+        return {false, obj["error"].toString().toStdString()};
+    return {false, "Respuesta inesperada del servidor."};
 }
 
 } // namespace DIArize::Red

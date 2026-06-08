@@ -49,6 +49,14 @@ class AsistenteIA:
         "no esta en el audio, deci 'No se mencionó en el audio'. Responde en espanol, breve."
     )
 
+    INSTRUCCION_TRADUCCION = (
+        "Sos un traductor profesional. Recibis una transcripcion de audio con etiquetas "
+        "tipo 'Persona 1:', 'Persona 2:' y timestamps. Tu tarea es traducir TODO el texto "
+        "al idioma indicado, preservando las etiquetas de persona y los timestamps tal "
+        "cual estan. NO traduzcas los nombres propios. NO resumas ni cambies el contenido. "
+        "Devolve solo el texto traducido, con el mismo formato."
+    )
+
     def __init__(
         self,
         api_key: str,
@@ -90,6 +98,15 @@ class AsistenteIA:
     def analizar(self, transcripcion: str) -> str:
         """Devuelve un analisis estructurado (temas, tono, acciones, etc.)."""
         return self._chat(self.INSTRUCCION_ANALISIS, transcripcion, temperatura=0.3)
+
+    def traducir(self, transcripcion: str, idioma_destino: str) -> str:
+        """Traduce la transcripcion al idioma indicado, preservando formato."""
+        prompt = (
+            f"Traduci esta transcripcion al {idioma_destino}. "
+            f"Manten las etiquetas 'Persona N:' y los timestamps sin cambios.\n\n"
+            f"{transcripcion}"
+        )
+        return self._chat(self.INSTRUCCION_TRADUCCION, prompt, temperatura=0.2)
 
     def preguntar(self, transcripcion: str, pregunta: str, historial: Optional[list] = None) -> str:
         """

@@ -22,6 +22,7 @@ public:
 
     QByteArray get (const QString& endpoint) const;
     QByteArray post(const QString& endpoint, QHttpMultiPart* multipart) const;
+    QByteArray postJson(const QString& endpoint, const QByteArray& json) const;
 
 protected:
     // Virtual: subclases pueden personalizar headers antes de cada envio

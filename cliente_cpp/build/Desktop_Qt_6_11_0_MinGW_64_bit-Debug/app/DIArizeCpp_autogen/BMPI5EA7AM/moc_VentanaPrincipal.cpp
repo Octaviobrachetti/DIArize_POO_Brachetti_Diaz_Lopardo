@@ -8,6 +8,7 @@
 
 #include "../../../../../app/include/gui/VentanaPrincipal.h"
 #include <QtGui/qtextcursor.h>
+#include <QtNetwork/QSslError>
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>
@@ -42,17 +43,77 @@ template <> constexpr inline auto DIArize::GUI::VentanaPrincipal::qt_create_meta
         "DIArize::GUI::VentanaPrincipal",
         "_seleccionarArchivo",
         "",
+        "_quitarAudio",
+        "_toggleGrabacion",
+        "_tickGrabacion",
+        "_toggleReproduccion",
         "_transcribir",
-        "_verificarServidor"
+        "_onTranscripcionLista",
+        "_limpiar",
+        "_resumir",
+        "_analizar",
+        "_traducir",
+        "_preguntar",
+        "_onLimpiarListo",
+        "_onResumirListo",
+        "_onAnalizarListo",
+        "_onTraducirListo",
+        "_onPreguntarListo",
+        "_guardarTodo",
+        "_verificarServidor",
+        "_cambiarAModoArchivo",
+        "_cambiarAModoEnVivo",
+        "_procesarWavDeEnVivo",
+        "rutaWav"
     };
 
     QtMocHelpers::UintData qt_methods {
         // Slot '_seleccionarArchivo'
         QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot '_transcribir'
+        // Slot '_quitarAudio'
         QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot '_verificarServidor'
+        // Slot '_toggleGrabacion'
         QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot '_tickGrabacion'
+        QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot '_toggleReproduccion'
+        QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot '_transcribir'
+        QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot '_onTranscripcionLista'
+        QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot '_limpiar'
+        QtMocHelpers::SlotData<void()>(9, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot '_resumir'
+        QtMocHelpers::SlotData<void()>(10, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot '_analizar'
+        QtMocHelpers::SlotData<void()>(11, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot '_traducir'
+        QtMocHelpers::SlotData<void()>(12, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot '_preguntar'
+        QtMocHelpers::SlotData<void()>(13, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot '_onLimpiarListo'
+        QtMocHelpers::SlotData<void()>(14, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot '_onResumirListo'
+        QtMocHelpers::SlotData<void()>(15, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot '_onAnalizarListo'
+        QtMocHelpers::SlotData<void()>(16, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot '_onTraducirListo'
+        QtMocHelpers::SlotData<void()>(17, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot '_onPreguntarListo'
+        QtMocHelpers::SlotData<void()>(18, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot '_guardarTodo'
+        QtMocHelpers::SlotData<void()>(19, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot '_verificarServidor'
+        QtMocHelpers::SlotData<void()>(20, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot '_cambiarAModoArchivo'
+        QtMocHelpers::SlotData<void()>(21, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot '_cambiarAModoEnVivo'
+        QtMocHelpers::SlotData<void()>(22, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot '_procesarWavDeEnVivo'
+        QtMocHelpers::SlotData<void(const QString &)>(23, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 24 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -77,12 +138,30 @@ void DIArize::GUI::VentanaPrincipal::qt_static_metacall(QObject *_o, QMetaObject
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->_seleccionarArchivo(); break;
-        case 1: _t->_transcribir(); break;
-        case 2: _t->_verificarServidor(); break;
+        case 1: _t->_quitarAudio(); break;
+        case 2: _t->_toggleGrabacion(); break;
+        case 3: _t->_tickGrabacion(); break;
+        case 4: _t->_toggleReproduccion(); break;
+        case 5: _t->_transcribir(); break;
+        case 6: _t->_onTranscripcionLista(); break;
+        case 7: _t->_limpiar(); break;
+        case 8: _t->_resumir(); break;
+        case 9: _t->_analizar(); break;
+        case 10: _t->_traducir(); break;
+        case 11: _t->_preguntar(); break;
+        case 12: _t->_onLimpiarListo(); break;
+        case 13: _t->_onResumirListo(); break;
+        case 14: _t->_onAnalizarListo(); break;
+        case 15: _t->_onTraducirListo(); break;
+        case 16: _t->_onPreguntarListo(); break;
+        case 17: _t->_guardarTodo(); break;
+        case 18: _t->_verificarServidor(); break;
+        case 19: _t->_cambiarAModoArchivo(); break;
+        case 20: _t->_cambiarAModoEnVivo(); break;
+        case 21: _t->_procesarWavDeEnVivo((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
         default: ;
         }
     }
-    (void)_a;
 }
 
 const QMetaObject *DIArize::GUI::VentanaPrincipal::metaObject() const
@@ -106,14 +185,14 @@ int DIArize::GUI::VentanaPrincipal::qt_metacall(QMetaObject::Call _c, int _id, v
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 22)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 22;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 22)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 3;
+        _id -= 22;
     }
     return _id;
 }

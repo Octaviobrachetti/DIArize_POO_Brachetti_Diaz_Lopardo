@@ -1,9 +1,11 @@
 app/CMakeFiles/DIArizeCpp.dir/src/gui/VentanaPrincipal.cpp.obj: \
  C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\gui\VentanaPrincipal.cpp \
  C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/include/gui/VentanaPrincipal.h \
- C:/Qt/6.11.0/mingw_64/include/QtGui/QCloseEvent \
- C:/Qt/6.11.0/mingw_64/include/QtGui/qevent.h \
- C:/Qt/6.11.0/mingw_64/include/QtGui/qtguiglobal.h \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/QAudioInput \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/qaudioinput.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qobject.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qobjectdefs.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qnamespace.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qglobal.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/type_traits \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -151,14 +153,6 @@ app/CMakeFiles/DIArizeCpp.dir/src/gui/VentanaPrincipal.cpp.obj: \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qtresource.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qttranslation.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qversiontagging.h \
- C:/Qt/6.11.0/mingw_64/include/QtGui/qtgui-config.h \
- C:/Qt/6.11.0/mingw_64/include/QtGui/qtguiexports.h \
- C:/Qt/6.11.0/mingw_64/include/QtCore/qcoreevent.h \
- C:/Qt/6.11.0/mingw_64/include/QtCore/qbasictimer.h \
- C:/Qt/6.11.0/mingw_64/include/QtCore/qabstracteventdispatcher.h \
- C:/Qt/6.11.0/mingw_64/include/QtCore/qobject.h \
- C:/Qt/6.11.0/mingw_64/include/QtCore/qobjectdefs.h \
- C:/Qt/6.11.0/mingw_64/include/QtCore/qnamespace.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qcompare.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qstdlibdetection.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qcomparehelpers.h \
@@ -329,12 +323,27 @@ app/CMakeFiles/DIArizeCpp.dir/src/gui/VentanaPrincipal.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/chrono.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ctime \
- C:/Qt/6.11.0/mingw_64/include/QtCore/qeventloop.h \
- C:/Qt/6.11.0/mingw_64/include/QtCore/qdeadlinetimer.h \
- C:/Qt/6.11.0/mingw_64/include/QtCore/qiodevice.h \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
+ C:/Qt/6.11.0/mingw_64/include/QtGui/qtguiglobal.h \
+ C:/Qt/6.11.0/mingw_64/include/QtGui/qtgui-config.h \
+ C:/Qt/6.11.0/mingw_64/include/QtGui/qtguiexports.h \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/qtaudio.h \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/qaudio.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qspan.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cassert \
  C:/Qt/6.11.0/mingw_64/include/QtCore/q20iterator.h \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/QAudioOutput \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/qaudiooutput.h \
+ C:/Qt/6.11.0/mingw_64/include/QtGui/QCloseEvent \
+ C:/Qt/6.11.0/mingw_64/include/QtGui/qevent.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qcoreevent.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qbasictimer.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qabstracteventdispatcher.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qeventloop.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qdeadlinetimer.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qiodevice.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qurl.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qvariant.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qdebug.h \
@@ -389,12 +398,11 @@ app/CMakeFiles/DIArizeCpp.dir/src/gui/VentanaPrincipal.cpp.obj: \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qlocale.h \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qguiapplication_platform.h \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qkeysequence.h \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/QLabel \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlabel.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QComboBox \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qcombobox.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qframe.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qwidget.h \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qaction.h \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qicon.h \
@@ -415,37 +423,6 @@ app/CMakeFiles/DIArizeCpp.dir/src/gui/VentanaPrincipal.cpp.obj: \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qsizepolicy.h \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qcursor.h \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qbitmap.h \
- C:/Qt/6.11.0/mingw_64/include/QtGui/qpicture.h \
- C:/Qt/6.11.0/mingw_64/include/QtGui/qtextdocument.h \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/QMainWindow \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qmainwindow.h \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtabwidget.h \
- C:/Qt/6.11.0/mingw_64/include/QtCore/QProcess \
- C:/Qt/6.11.0/mingw_64/include/QtCore/qprocess.h \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/QProgressBar \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qprogressbar.h \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/QPushButton \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qpushbutton.h \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractbutton.h \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTabWidget \
- C:/Qt/6.11.0/mingw_64/include/QtCore/QTimer \
- C:/Qt/6.11.0/mingw_64/include/QtCore/qtimer.h \
- C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/include/gui/PanelBase.h \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/QWidget \
- C:/Qt/6.11.0/mingw_64/include/QtCore/QString \
- C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/nucleo/include/nucleo/Transcripcion.h \
- C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/nucleo/include/nucleo/Segmento.h \
- C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/nucleo/include/nucleo/IObservador.h \
- C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/nucleo/include/nucleo/ITranscriptor.h \
- C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/nucleo/include/nucleo/Repositorio.h \
- C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/include/gui/PanelHistorial.h \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/QListWidget \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlistwidget.h \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlistview.h \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractitemview.h \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
- C:/Qt/6.11.0/mingw_64/include/QtCore/qabstractitemmodel.h \
- C:/Qt/6.11.0/mingw_64/include/QtCore/qitemselectionmodel.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qstyleoption.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
@@ -455,56 +432,76 @@ app/CMakeFiles/DIArizeCpp.dir/src/gui/VentanaPrincipal.cpp.obj: \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractslider.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qstyle.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtabbar.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtabwidget.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qrubberband.h \
- C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/include/gui/PanelTranscripcion.h \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTextEdit \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtextedit.h \
- C:/Qt/6.11.0/mingw_64/include/QtGui/qtextoption.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qframe.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qabstractitemmodel.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QFutureWatcher \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qfuturewatcher.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qfuture.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qfutureinterface.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qmutex.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qtsan_impl.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qresultstore.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qfuture_impl.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qthreadpool.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qthread.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/future \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/mutex \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_mutex.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unique_lock.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/condition_variable \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_futex.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_thread.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qrunnable.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qexception.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qpromise.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QLabel \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlabel.h \
+ C:/Qt/6.11.0/mingw_64/include/QtGui/qpicture.h \
+ C:/Qt/6.11.0/mingw_64/include/QtGui/qtextdocument.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QLineEdit \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlineedit.h \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qtextcursor.h \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qtextformat.h \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qpen.h \
- C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/include/red/ClienteTranscriptor.h \
- C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/include/red/ClienteHTTP.h \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/QHttpMultiPart \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/qhttpmultipart.h \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/qtnetworkglobal.h \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/qtnetwork-config.h \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/qtnetworkexports.h \
- C:/Qt/6.11.0/mingw_64/include/QtCore/QSharedDataPointer \
- C:/Qt/6.11.0/mingw_64/include/QtCore/QByteArray \
- C:/Qt/6.11.0/mingw_64/include/QtCore/QIODevice \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/QNetworkRequest \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/qnetworkrequest.h \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/qhttpheaders.h \
- C:/Qt/6.11.0/mingw_64/include/QtCore/qdatetime.h \
- C:/Qt/6.11.0/mingw_64/include/QtCore/qcalendar.h \
- C:/Qt/6.11.0/mingw_64/include/QtCore/qmetaobject.h \
+ C:/Qt/6.11.0/mingw_64/include/QtGui/qtextoption.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QMainWindow \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qmainwindow.h \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/QMediaCaptureSession \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/qmediacapturesession.h \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/QMediaPlayer \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/qmediaplayer.h \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/QMediaRecorder \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/qmediarecorder.h \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/qmediametadata.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QProcess \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qprocess.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QProgressBar \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qprogressbar.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QPushButton \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qpushbutton.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QSpinBox \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qspinbox.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QStackedWidget \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qstackedwidget.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTabWidget \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTextEdit \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtextedit.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QTimer \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qtimer.h \
+ C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/include/gui/PanelEnVivo.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/QString \
- C:/Qt/6.11.0/mingw_64/include/QtCore/QUrl \
- C:/Qt/6.11.0/mingw_64/include/QtCore/QVariant \
- C:/Qt/6.11.0/mingw_64/include/QtCore/q26numeric.h \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/QNetworkAccessManager \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/QSslConfiguration \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/qsslconfiguration.h \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/qsslsocket.h \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/qtcpsocket.h \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/qabstractsocket.h \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/qhostaddress.h \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/qsslerror.h \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/qsslcertificate.h \
- C:/Qt/6.11.0/mingw_64/include/QtCore/qcryptographichash.h \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/qssl.h \
- C:/Qt/6.11.0/mingw_64/include/QtCore/QFlags \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
- C:/Qt/6.11.0/mingw_64/include/QtCore/QMetaType \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/QNetworkReply \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/qnetworkreply.h \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/QNetworkAccessManager \
- C:/Qt/6.11.0/mingw_64/include/QtNetwork/QNetworkRequest \
- C:/Qt/6.11.0/mingw_64/include/QtCore/QUrl \
- C:/Qt/6.11.0/mingw_64/include/QtCore/QCoreApplication \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QWidget \
+ C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/include/red/ClienteStreaming.h \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/QAudioFormat \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/qaudioformat.h \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/QAudioSource \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/qaudiosource.h \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/qaudiodevice.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QByteArray \
  C:/Qt/6.11.0/mingw_64/include/QtCore/QFile \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qfile.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qfiledevice.h \
@@ -538,12 +535,73 @@ app/CMakeFiles/DIArizeCpp.dir/src/gui/VentanaPrincipal.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/codecvt \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/QFileDialog \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qfiledialog.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QIODevice \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QObject \
+ C:/Qt/6.11.0/mingw_64/include/QtWebSockets/QWebSocket \
+ C:/Qt/6.11.0/mingw_64/include/QtWebSockets/qwebsocket.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QUrl \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/QAbstractSocket \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/qabstractsocket.h \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/qtnetwork-config.h \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/qtnetworkexports.h \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/QNetworkRequest \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/qnetworkrequest.h \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/qhttpheaders.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qdatetime.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qcalendar.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qmetaobject.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QSharedDataPointer \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QString \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QVariant \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/q26numeric.h \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/QNetworkProxy \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/qnetworkproxy.h \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/qhostaddress.h \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/QSslError \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/qsslerror.h \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/qsslcertificate.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qcryptographichash.h \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/qssl.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QFlags \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/QSslConfiguration \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/qsslconfiguration.h \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/qsslsocket.h \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/qtcpsocket.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWebSockets/qwebsockets_global.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWebSockets/qtwebsocketsexports.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWebSockets/qwebsocketprotocol.h \
+ C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/nucleo/include/nucleo/IObservador.h \
+ C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/nucleo/include/nucleo/Repositorio.h \
+ C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/nucleo/include/nucleo/Transcripcion.h \
+ C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/nucleo/include/nucleo/Segmento.h \
+ C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/include/red/ClienteTranscriptor.h \
+ C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/include/red/ClienteHTTP.h \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/QHttpMultiPart \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/qhttpmultipart.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QByteArray \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QIODevice \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/QNetworkAccessManager \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QMetaType \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/QNetworkReply \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/qnetworkreply.h \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/QNetworkAccessManager \
+ C:/Qt/6.11.0/mingw_64/include/QtNetwork/QNetworkRequest \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QUrl \
+ C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/nucleo/include/nucleo/ITranscriptor.h \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/QAudioDevice \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QCoreApplication \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QDateTime \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QDir \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qdir.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qdirlisting.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qfileinfo.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qtimezone.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QFileDialog \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qfiledialog.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qdialog.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/QFileInfo \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QFrame \
@@ -552,9 +610,258 @@ app/CMakeFiles/DIArizeCpp.dir/src/gui/VentanaPrincipal.cpp.obj: \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlayout.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlayoutitem.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qgridlayout.h \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/QMediaDevices \
+ C:/Qt/6.11.0/mingw_64/include/QtMultimedia/qmediadevices.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QMessageBox \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qmessagebox.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QStandardPaths \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qstandardpaths.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QStatusBar \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qstatusbar.h \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/QVBoxLayout
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QStringConverter \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QStyle \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QTextStream \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QVBoxLayout \
+ C:/Qt/6.11.0/mingw_64/include/QtConcurrent/QtConcurrent \
+ C:/Qt/6.11.0/mingw_64/include/QtConcurrent/QtConcurrentDepends \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QtCore \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QtCoreDepends \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/q20algorithm.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/q20chrono.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/q20map.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/memory_resource \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/shared_mutex \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/q20vector.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/q23functional.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qabstractanimation.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qabstractnativeeventfilter.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qabstractproxymodel.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qanimationgroup.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qapplicationstatic.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QMutex \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qassociativeiterable.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qatomicscopedvaluerollback.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qbitarray.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qbuffer.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qbytearraymatcher.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qcache.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qcborarray.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qcborvalue.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qcborcommon.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/quuid.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qcbormap.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qcborstream.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qcborstreamreader.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qcborstreamwriter.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qchronotimer.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qproperty.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qpropertyprivate.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/experimental/source_location \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qcollator.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qcommandlineoption.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qcommandlineparser.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qconcatenatetablesproxymodel.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qdiriterator.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qeasingcurve.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qelapsedtimer.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qfactoryinterface.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qfileselector.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QStringList \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qfilesystemwatcher.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qfuturesynchronizer.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qidentityproxymodel.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qitemselectionmodel.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qjsonarray.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qjsonvalue.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qjsondocument.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qjsonparseerror.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qjsonobject.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qlatin1stringmatcher.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qlibrary.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qlibraryinfo.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qversionnumber.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qtyperevision.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qlockfile.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qloggingcategory.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qmessageauthenticationcode.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qmetaassociation.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qiterable_impl.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qmetasequence.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qmimedata.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qmimedatabase.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qmimetype.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qobjectcleanuphandler.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qoperatingsystemversion.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qparallelanimationgroup.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qpauseanimation.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qpermissions.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qplugin.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qpointer.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qpluginloader.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qpropertyanimation.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qvariantanimation.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qqueue.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qrandom.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/random \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/pmmintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/emmintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/xmmintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mmintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mwaitintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.tcc \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qrangemodel.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qrangemodel_impl.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qquasivirtual_impl.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qscopedvaluerollback.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qrangemodeladapter.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qrangemodeladapter_impl.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qreadwritelock.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qresource.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qsavefile.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qsemaphore.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qsequentialanimationgroup.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qsequentialiterable.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qsettings.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qsharedmemory.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qtipccommon.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qsignalmapper.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qsimd.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/immintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/x86gprintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/ia32intrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/adxintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/bmiintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/bmi2intrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/cetintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/cldemoteintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/clflushoptintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/clwbintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/clzerointrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/cmpccxaddintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/enqcmdintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/fxsrintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/lzcntintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/lwpintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/movdirintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mwaitxintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/pconfigintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/popcntintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/pkuintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/prfchiintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/raointintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/rdseedintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/rtmintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/serializeintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/sgxintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/tbmintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/tsxldtrkintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/uintrintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/waitpkgintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/wbnoinvdintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/xsaveintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/xsavecintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/xsaveoptintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/xsavesintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/xtestintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/hresetintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/tmmintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/smmintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/wmmintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avxintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avxvnniintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avxifmaintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avxvnniint8intrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx2intrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512fintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512erintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512pfintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512cdintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vlintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512bwintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512dqintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vlbwintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vldqintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512ifmaintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512ifmavlintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vbmiintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vbmivlintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx5124fmapsintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx5124vnniwintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vpopcntdqintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vbmi2intrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vbmi2vlintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vnniintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vnnivlintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vpopcntdqvlintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512bitalgintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vp2intersectintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vp2intersectvlintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512fp16intrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512fp16vlintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/shaintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/fmaintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/f16cintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/gfniintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/vaesintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/vpclmulqdqintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512bf16vlintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512bf16intrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avxneconvertintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/amxtileintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/amxint8intrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/amxbf16intrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/amxcomplexintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/prfchwintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/keylockerintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/amxfp16intrin.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qsocketnotifier.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qsortfilterproxymodel.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qstack.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qstaticlatin1stringmatcher.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qstorageinfo.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qstringlistmodel.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qstringliteral.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qsystemsemaphore.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qtcoreversion.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qtemporarydir.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qtemporaryfile.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qtextboundaryfinder.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qthreadstorage.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qtimeline.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qtmocconstants.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qtranslator.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qtransposeproxymodel.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qtsymbolmacros.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qurlquery.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qvarianthash.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QHash \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qvariantlist.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qvariantmap.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QMap \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qvector.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qwaitcondition.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QDeadlineTimer \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qwineventnotifier.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qxmlstream.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qxpfunctional.h \
+ C:/Qt/6.11.0/mingw_64/include/QtConcurrent/qtaskbuilder.h \
+ C:/Qt/6.11.0/mingw_64/include/QtConcurrent/qtconcurrentstoredfunctioncall.h \
+ C:/Qt/6.11.0/mingw_64/include/QtConcurrent/qtconcurrent_global.h \
+ C:/Qt/6.11.0/mingw_64/include/QtConcurrent/qtconcurrentexports.h \
+ C:/Qt/6.11.0/mingw_64/include/QtConcurrent/qtconcurrentrunbase.h \
+ C:/Qt/6.11.0/mingw_64/include/QtConcurrent/qtconcurrentcompilertest.h \
+ C:/Qt/6.11.0/mingw_64/include/QtConcurrent/qtconcurrentfilter.h \
+ C:/Qt/6.11.0/mingw_64/include/QtConcurrent/qtconcurrentfilterkernel.h \
+ C:/Qt/6.11.0/mingw_64/include/QtConcurrent/qtconcurrentiteratekernel.h \
+ C:/Qt/6.11.0/mingw_64/include/QtConcurrent/qtconcurrentmedian.h \
+ C:/Qt/6.11.0/mingw_64/include/QtConcurrent/qtconcurrentthreadengine.h \
+ C:/Qt/6.11.0/mingw_64/include/QtConcurrent/qtconcurrentmapkernel.h \
+ C:/Qt/6.11.0/mingw_64/include/QtConcurrent/qtconcurrentreducekernel.h \
+ C:/Qt/6.11.0/mingw_64/include/QtConcurrent/qtconcurrentfunctionwrappers.h \
+ C:/Qt/6.11.0/mingw_64/include/QtConcurrent/qtconcurrentmap.h \
+ C:/Qt/6.11.0/mingw_64/include/QtConcurrent/qtconcurrentrun.h \
+ C:/Qt/6.11.0/mingw_64/include/QtConcurrent/qtconcurrenttask.h \
+ C:/Qt/6.11.0/mingw_64/include/QtConcurrent/qtconcurrentversion.h

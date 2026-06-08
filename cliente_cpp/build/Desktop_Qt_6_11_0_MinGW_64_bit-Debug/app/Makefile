@@ -157,6 +157,30 @@ DIArizeCpp_autogen/fast:
 	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp_autogen.dir\build.make app/CMakeFiles/DIArizeCpp_autogen.dir/build
 .PHONY : DIArizeCpp_autogen/fast
 
+DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.obj: DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.obj
+.PHONY : DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.obj
+
+# target to build an object file
+DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.obj:
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.obj
+.PHONY : DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.obj
+
+DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.i: DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.i
+.PHONY : DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.i
+
+# target to preprocess a source file
+DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.i:
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.i
+.PHONY : DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.i
+
+DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.s: DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.s
+.PHONY : DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.s
+
+# target to generate assembly for a file
+DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.s:
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.s
+.PHONY : DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.s
+
 DIArizeCpp_autogen/mocs_compilation.obj: DIArizeCpp_autogen/mocs_compilation.cpp.obj
 .PHONY : DIArizeCpp_autogen/mocs_compilation.obj
 
@@ -181,77 +205,53 @@ DIArizeCpp_autogen/mocs_compilation.cpp.s:
 	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/mocs_compilation.cpp.s
 .PHONY : DIArizeCpp_autogen/mocs_compilation.cpp.s
 
-src/gui/PanelBase.obj: src/gui/PanelBase.cpp.obj
-.PHONY : src/gui/PanelBase.obj
+src/gui/PanelEnVivo.obj: src/gui/PanelEnVivo.cpp.obj
+.PHONY : src/gui/PanelEnVivo.obj
 
 # target to build an object file
-src/gui/PanelBase.cpp.obj:
-	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelBase.cpp.obj
-.PHONY : src/gui/PanelBase.cpp.obj
+src/gui/PanelEnVivo.cpp.obj:
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelEnVivo.cpp.obj
+.PHONY : src/gui/PanelEnVivo.cpp.obj
 
-src/gui/PanelBase.i: src/gui/PanelBase.cpp.i
-.PHONY : src/gui/PanelBase.i
+src/gui/PanelEnVivo.i: src/gui/PanelEnVivo.cpp.i
+.PHONY : src/gui/PanelEnVivo.i
 
 # target to preprocess a source file
-src/gui/PanelBase.cpp.i:
-	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelBase.cpp.i
-.PHONY : src/gui/PanelBase.cpp.i
+src/gui/PanelEnVivo.cpp.i:
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelEnVivo.cpp.i
+.PHONY : src/gui/PanelEnVivo.cpp.i
 
-src/gui/PanelBase.s: src/gui/PanelBase.cpp.s
-.PHONY : src/gui/PanelBase.s
+src/gui/PanelEnVivo.s: src/gui/PanelEnVivo.cpp.s
+.PHONY : src/gui/PanelEnVivo.s
 
 # target to generate assembly for a file
-src/gui/PanelBase.cpp.s:
-	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelBase.cpp.s
-.PHONY : src/gui/PanelBase.cpp.s
+src/gui/PanelEnVivo.cpp.s:
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelEnVivo.cpp.s
+.PHONY : src/gui/PanelEnVivo.cpp.s
 
-src/gui/PanelHistorial.obj: src/gui/PanelHistorial.cpp.obj
-.PHONY : src/gui/PanelHistorial.obj
+src/gui/PantallaCarga.obj: src/gui/PantallaCarga.cpp.obj
+.PHONY : src/gui/PantallaCarga.obj
 
 # target to build an object file
-src/gui/PanelHistorial.cpp.obj:
-	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelHistorial.cpp.obj
-.PHONY : src/gui/PanelHistorial.cpp.obj
+src/gui/PantallaCarga.cpp.obj:
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/src/gui/PantallaCarga.cpp.obj
+.PHONY : src/gui/PantallaCarga.cpp.obj
 
-src/gui/PanelHistorial.i: src/gui/PanelHistorial.cpp.i
-.PHONY : src/gui/PanelHistorial.i
-
-# target to preprocess a source file
-src/gui/PanelHistorial.cpp.i:
-	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelHistorial.cpp.i
-.PHONY : src/gui/PanelHistorial.cpp.i
-
-src/gui/PanelHistorial.s: src/gui/PanelHistorial.cpp.s
-.PHONY : src/gui/PanelHistorial.s
-
-# target to generate assembly for a file
-src/gui/PanelHistorial.cpp.s:
-	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelHistorial.cpp.s
-.PHONY : src/gui/PanelHistorial.cpp.s
-
-src/gui/PanelTranscripcion.obj: src/gui/PanelTranscripcion.cpp.obj
-.PHONY : src/gui/PanelTranscripcion.obj
-
-# target to build an object file
-src/gui/PanelTranscripcion.cpp.obj:
-	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelTranscripcion.cpp.obj
-.PHONY : src/gui/PanelTranscripcion.cpp.obj
-
-src/gui/PanelTranscripcion.i: src/gui/PanelTranscripcion.cpp.i
-.PHONY : src/gui/PanelTranscripcion.i
+src/gui/PantallaCarga.i: src/gui/PantallaCarga.cpp.i
+.PHONY : src/gui/PantallaCarga.i
 
 # target to preprocess a source file
-src/gui/PanelTranscripcion.cpp.i:
-	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelTranscripcion.cpp.i
-.PHONY : src/gui/PanelTranscripcion.cpp.i
+src/gui/PantallaCarga.cpp.i:
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/src/gui/PantallaCarga.cpp.i
+.PHONY : src/gui/PantallaCarga.cpp.i
 
-src/gui/PanelTranscripcion.s: src/gui/PanelTranscripcion.cpp.s
-.PHONY : src/gui/PanelTranscripcion.s
+src/gui/PantallaCarga.s: src/gui/PantallaCarga.cpp.s
+.PHONY : src/gui/PantallaCarga.s
 
 # target to generate assembly for a file
-src/gui/PanelTranscripcion.cpp.s:
-	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelTranscripcion.cpp.s
-.PHONY : src/gui/PanelTranscripcion.cpp.s
+src/gui/PantallaCarga.cpp.s:
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/src/gui/PantallaCarga.cpp.s
+.PHONY : src/gui/PantallaCarga.cpp.s
 
 src/gui/VentanaPrincipal.obj: src/gui/VentanaPrincipal.cpp.obj
 .PHONY : src/gui/VentanaPrincipal.obj
@@ -325,6 +325,30 @@ src/red/ClienteHTTP.cpp.s:
 	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/src/red/ClienteHTTP.cpp.s
 .PHONY : src/red/ClienteHTTP.cpp.s
 
+src/red/ClienteStreaming.obj: src/red/ClienteStreaming.cpp.obj
+.PHONY : src/red/ClienteStreaming.obj
+
+# target to build an object file
+src/red/ClienteStreaming.cpp.obj:
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/src/red/ClienteStreaming.cpp.obj
+.PHONY : src/red/ClienteStreaming.cpp.obj
+
+src/red/ClienteStreaming.i: src/red/ClienteStreaming.cpp.i
+.PHONY : src/red/ClienteStreaming.i
+
+# target to preprocess a source file
+src/red/ClienteStreaming.cpp.i:
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/src/red/ClienteStreaming.cpp.i
+.PHONY : src/red/ClienteStreaming.cpp.i
+
+src/red/ClienteStreaming.s: src/red/ClienteStreaming.cpp.s
+.PHONY : src/red/ClienteStreaming.s
+
+# target to generate assembly for a file
+src/red/ClienteStreaming.cpp.s:
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\DIArizeCpp.dir\build.make app/CMakeFiles/DIArizeCpp.dir/src/red/ClienteStreaming.cpp.s
+.PHONY : src/red/ClienteStreaming.cpp.s
+
 src/red/ClienteTranscriptor.obj: src/red/ClienteTranscriptor.cpp.obj
 .PHONY : src/red/ClienteTranscriptor.obj
 
@@ -360,18 +384,18 @@ help:
 	@echo ... DIArizeCpp_autogen
 	@echo ... DIArizeCpp_autogen_timestamp_deps
 	@echo ... DIArizeCpp
+	@echo ... DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.obj
+	@echo ... DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.i
+	@echo ... DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.s
 	@echo ... DIArizeCpp_autogen/mocs_compilation.obj
 	@echo ... DIArizeCpp_autogen/mocs_compilation.i
 	@echo ... DIArizeCpp_autogen/mocs_compilation.s
-	@echo ... src/gui/PanelBase.obj
-	@echo ... src/gui/PanelBase.i
-	@echo ... src/gui/PanelBase.s
-	@echo ... src/gui/PanelHistorial.obj
-	@echo ... src/gui/PanelHistorial.i
-	@echo ... src/gui/PanelHistorial.s
-	@echo ... src/gui/PanelTranscripcion.obj
-	@echo ... src/gui/PanelTranscripcion.i
-	@echo ... src/gui/PanelTranscripcion.s
+	@echo ... src/gui/PanelEnVivo.obj
+	@echo ... src/gui/PanelEnVivo.i
+	@echo ... src/gui/PanelEnVivo.s
+	@echo ... src/gui/PantallaCarga.obj
+	@echo ... src/gui/PantallaCarga.i
+	@echo ... src/gui/PantallaCarga.s
 	@echo ... src/gui/VentanaPrincipal.obj
 	@echo ... src/gui/VentanaPrincipal.i
 	@echo ... src/gui/VentanaPrincipal.s
@@ -381,6 +405,9 @@ help:
 	@echo ... src/red/ClienteHTTP.obj
 	@echo ... src/red/ClienteHTTP.i
 	@echo ... src/red/ClienteHTTP.s
+	@echo ... src/red/ClienteStreaming.obj
+	@echo ... src/red/ClienteStreaming.i
+	@echo ... src/red/ClienteStreaming.s
 	@echo ... src/red/ClienteTranscriptor.obj
 	@echo ... src/red/ClienteTranscriptor.i
 	@echo ... src/red/ClienteTranscriptor.s

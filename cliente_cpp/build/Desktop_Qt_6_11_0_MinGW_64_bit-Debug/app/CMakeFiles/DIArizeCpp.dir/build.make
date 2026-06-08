@@ -68,11 +68,19 @@ include app/CMakeFiles/DIArizeCpp.dir/progress.make
 # Include the compile flags for this target's objects.
 include app/CMakeFiles/DIArizeCpp.dir/flags.make
 
+app/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp: C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/resources/recursos.qrc
+app/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp: app/CMakeFiles/DIArizeCpp_autogen.dir/AutoRcc_recursos_3YJK5W5UP7_Info.json
+app/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp: C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/resources/diarize_logo.png
+app/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp: C:/Qt/6.11.0/mingw_64/bin/rcc.exe
+app/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp: C:/Qt/6.11.0/mingw_64/bin/rcc.exe
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic RCC for resources/recursos.qrc"
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autorcc C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/app/CMakeFiles/DIArizeCpp_autogen.dir/AutoRcc_recursos_3YJK5W5UP7_Info.json Debug
+
 app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/mocs_compilation.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/flags.make
 app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/mocs_compilation.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/includes_CXX.rsp
 app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/mocs_compilation.cpp.obj: app/DIArizeCpp_autogen/mocs_compilation.cpp
 app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/mocs_compilation.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/mocs_compilation.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/mocs_compilation.cpp.obj"
 	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\DIArizeCpp.dir\DIArizeCpp_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\DIArizeCpp.dir\DIArizeCpp_autogen\mocs_compilation.cpp.obj -c C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app\DIArizeCpp_autogen\mocs_compilation.cpp
 
 app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/mocs_compilation.cpp.i: cmake_force
@@ -87,7 +95,7 @@ app/CMakeFiles/DIArizeCpp.dir/src/main.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/fl
 app/CMakeFiles/DIArizeCpp.dir/src/main.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/includes_CXX.rsp
 app/CMakeFiles/DIArizeCpp.dir/src/main.cpp.obj: C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/src/main.cpp
 app/CMakeFiles/DIArizeCpp.dir/src/main.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object app/CMakeFiles/DIArizeCpp.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object app/CMakeFiles/DIArizeCpp.dir/src/main.cpp.obj"
 	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT app/CMakeFiles/DIArizeCpp.dir/src/main.cpp.obj -MF CMakeFiles\DIArizeCpp.dir\src\main.cpp.obj.d -o CMakeFiles\DIArizeCpp.dir\src\main.cpp.obj -c C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\main.cpp
 
 app/CMakeFiles/DIArizeCpp.dir/src/main.cpp.i: cmake_force
@@ -98,56 +106,11 @@ app/CMakeFiles/DIArizeCpp.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DIArizeCpp.dir/src/main.cpp.s"
 	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\main.cpp -o CMakeFiles\DIArizeCpp.dir\src\main.cpp.s
 
-app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelBase.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/flags.make
-app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelBase.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/includes_CXX.rsp
-app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelBase.cpp.obj: C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/src/gui/PanelBase.cpp
-app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelBase.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelBase.cpp.obj"
-	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelBase.cpp.obj -MF CMakeFiles\DIArizeCpp.dir\src\gui\PanelBase.cpp.obj.d -o CMakeFiles\DIArizeCpp.dir\src\gui\PanelBase.cpp.obj -c C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\gui\PanelBase.cpp
-
-app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelBase.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DIArizeCpp.dir/src/gui/PanelBase.cpp.i"
-	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\gui\PanelBase.cpp > CMakeFiles\DIArizeCpp.dir\src\gui\PanelBase.cpp.i
-
-app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelBase.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DIArizeCpp.dir/src/gui/PanelBase.cpp.s"
-	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\gui\PanelBase.cpp -o CMakeFiles\DIArizeCpp.dir\src\gui\PanelBase.cpp.s
-
-app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelTranscripcion.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/flags.make
-app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelTranscripcion.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/includes_CXX.rsp
-app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelTranscripcion.cpp.obj: C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/src/gui/PanelTranscripcion.cpp
-app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelTranscripcion.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelTranscripcion.cpp.obj"
-	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelTranscripcion.cpp.obj -MF CMakeFiles\DIArizeCpp.dir\src\gui\PanelTranscripcion.cpp.obj.d -o CMakeFiles\DIArizeCpp.dir\src\gui\PanelTranscripcion.cpp.obj -c C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\gui\PanelTranscripcion.cpp
-
-app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelTranscripcion.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DIArizeCpp.dir/src/gui/PanelTranscripcion.cpp.i"
-	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\gui\PanelTranscripcion.cpp > CMakeFiles\DIArizeCpp.dir\src\gui\PanelTranscripcion.cpp.i
-
-app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelTranscripcion.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DIArizeCpp.dir/src/gui/PanelTranscripcion.cpp.s"
-	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\gui\PanelTranscripcion.cpp -o CMakeFiles\DIArizeCpp.dir\src\gui\PanelTranscripcion.cpp.s
-
-app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelHistorial.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/flags.make
-app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelHistorial.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/includes_CXX.rsp
-app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelHistorial.cpp.obj: C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/src/gui/PanelHistorial.cpp
-app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelHistorial.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelHistorial.cpp.obj"
-	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelHistorial.cpp.obj -MF CMakeFiles\DIArizeCpp.dir\src\gui\PanelHistorial.cpp.obj.d -o CMakeFiles\DIArizeCpp.dir\src\gui\PanelHistorial.cpp.obj -c C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\gui\PanelHistorial.cpp
-
-app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelHistorial.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DIArizeCpp.dir/src/gui/PanelHistorial.cpp.i"
-	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\gui\PanelHistorial.cpp > CMakeFiles\DIArizeCpp.dir\src\gui\PanelHistorial.cpp.i
-
-app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelHistorial.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DIArizeCpp.dir/src/gui/PanelHistorial.cpp.s"
-	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\gui\PanelHistorial.cpp -o CMakeFiles\DIArizeCpp.dir\src\gui\PanelHistorial.cpp.s
-
 app/CMakeFiles/DIArizeCpp.dir/src/gui/VentanaPrincipal.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/flags.make
 app/CMakeFiles/DIArizeCpp.dir/src/gui/VentanaPrincipal.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/includes_CXX.rsp
 app/CMakeFiles/DIArizeCpp.dir/src/gui/VentanaPrincipal.cpp.obj: C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/src/gui/VentanaPrincipal.cpp
 app/CMakeFiles/DIArizeCpp.dir/src/gui/VentanaPrincipal.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object app/CMakeFiles/DIArizeCpp.dir/src/gui/VentanaPrincipal.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object app/CMakeFiles/DIArizeCpp.dir/src/gui/VentanaPrincipal.cpp.obj"
 	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT app/CMakeFiles/DIArizeCpp.dir/src/gui/VentanaPrincipal.cpp.obj -MF CMakeFiles\DIArizeCpp.dir\src\gui\VentanaPrincipal.cpp.obj.d -o CMakeFiles\DIArizeCpp.dir\src\gui\VentanaPrincipal.cpp.obj -c C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\gui\VentanaPrincipal.cpp
 
 app/CMakeFiles/DIArizeCpp.dir/src/gui/VentanaPrincipal.cpp.i: cmake_force
@@ -157,6 +120,36 @@ app/CMakeFiles/DIArizeCpp.dir/src/gui/VentanaPrincipal.cpp.i: cmake_force
 app/CMakeFiles/DIArizeCpp.dir/src/gui/VentanaPrincipal.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DIArizeCpp.dir/src/gui/VentanaPrincipal.cpp.s"
 	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\gui\VentanaPrincipal.cpp -o CMakeFiles\DIArizeCpp.dir\src\gui\VentanaPrincipal.cpp.s
+
+app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelEnVivo.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/flags.make
+app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelEnVivo.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/includes_CXX.rsp
+app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelEnVivo.cpp.obj: C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/src/gui/PanelEnVivo.cpp
+app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelEnVivo.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelEnVivo.cpp.obj"
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelEnVivo.cpp.obj -MF CMakeFiles\DIArizeCpp.dir\src\gui\PanelEnVivo.cpp.obj.d -o CMakeFiles\DIArizeCpp.dir\src\gui\PanelEnVivo.cpp.obj -c C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\gui\PanelEnVivo.cpp
+
+app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelEnVivo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DIArizeCpp.dir/src/gui/PanelEnVivo.cpp.i"
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\gui\PanelEnVivo.cpp > CMakeFiles\DIArizeCpp.dir\src\gui\PanelEnVivo.cpp.i
+
+app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelEnVivo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DIArizeCpp.dir/src/gui/PanelEnVivo.cpp.s"
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\gui\PanelEnVivo.cpp -o CMakeFiles\DIArizeCpp.dir\src\gui\PanelEnVivo.cpp.s
+
+app/CMakeFiles/DIArizeCpp.dir/src/gui/PantallaCarga.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/flags.make
+app/CMakeFiles/DIArizeCpp.dir/src/gui/PantallaCarga.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/includes_CXX.rsp
+app/CMakeFiles/DIArizeCpp.dir/src/gui/PantallaCarga.cpp.obj: C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/src/gui/PantallaCarga.cpp
+app/CMakeFiles/DIArizeCpp.dir/src/gui/PantallaCarga.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object app/CMakeFiles/DIArizeCpp.dir/src/gui/PantallaCarga.cpp.obj"
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT app/CMakeFiles/DIArizeCpp.dir/src/gui/PantallaCarga.cpp.obj -MF CMakeFiles\DIArizeCpp.dir\src\gui\PantallaCarga.cpp.obj.d -o CMakeFiles\DIArizeCpp.dir\src\gui\PantallaCarga.cpp.obj -c C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\gui\PantallaCarga.cpp
+
+app/CMakeFiles/DIArizeCpp.dir/src/gui/PantallaCarga.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DIArizeCpp.dir/src/gui/PantallaCarga.cpp.i"
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\gui\PantallaCarga.cpp > CMakeFiles\DIArizeCpp.dir\src\gui\PantallaCarga.cpp.i
+
+app/CMakeFiles/DIArizeCpp.dir/src/gui/PantallaCarga.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DIArizeCpp.dir/src/gui/PantallaCarga.cpp.s"
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\gui\PantallaCarga.cpp -o CMakeFiles\DIArizeCpp.dir\src\gui\PantallaCarga.cpp.s
 
 app/CMakeFiles/DIArizeCpp.dir/src/red/ClienteHTTP.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/flags.make
 app/CMakeFiles/DIArizeCpp.dir/src/red/ClienteHTTP.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/includes_CXX.rsp
@@ -188,39 +181,74 @@ app/CMakeFiles/DIArizeCpp.dir/src/red/ClienteTranscriptor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DIArizeCpp.dir/src/red/ClienteTranscriptor.cpp.s"
 	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\red\ClienteTranscriptor.cpp -o CMakeFiles\DIArizeCpp.dir\src\red\ClienteTranscriptor.cpp.s
 
+app/CMakeFiles/DIArizeCpp.dir/src/red/ClienteStreaming.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/flags.make
+app/CMakeFiles/DIArizeCpp.dir/src/red/ClienteStreaming.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/includes_CXX.rsp
+app/CMakeFiles/DIArizeCpp.dir/src/red/ClienteStreaming.cpp.obj: C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/src/red/ClienteStreaming.cpp
+app/CMakeFiles/DIArizeCpp.dir/src/red/ClienteStreaming.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object app/CMakeFiles/DIArizeCpp.dir/src/red/ClienteStreaming.cpp.obj"
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT app/CMakeFiles/DIArizeCpp.dir/src/red/ClienteStreaming.cpp.obj -MF CMakeFiles\DIArizeCpp.dir\src\red\ClienteStreaming.cpp.obj.d -o CMakeFiles\DIArizeCpp.dir\src\red\ClienteStreaming.cpp.obj -c C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\red\ClienteStreaming.cpp
+
+app/CMakeFiles/DIArizeCpp.dir/src/red/ClienteStreaming.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DIArizeCpp.dir/src/red/ClienteStreaming.cpp.i"
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\red\ClienteStreaming.cpp > CMakeFiles\DIArizeCpp.dir\src\red\ClienteStreaming.cpp.i
+
+app/CMakeFiles/DIArizeCpp.dir/src/red/ClienteStreaming.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DIArizeCpp.dir/src/red/ClienteStreaming.cpp.s"
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app\src\red\ClienteStreaming.cpp -o CMakeFiles\DIArizeCpp.dir\src\red\ClienteStreaming.cpp.s
+
+app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/flags.make
+app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/includes_CXX.rsp
+app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.obj: app/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp
+app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.obj: app/CMakeFiles/DIArizeCpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.obj"
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.obj -MF CMakeFiles\DIArizeCpp.dir\DIArizeCpp_autogen\3YJK5W5UP7\qrc_recursos.cpp.obj.d -o CMakeFiles\DIArizeCpp.dir\DIArizeCpp_autogen\3YJK5W5UP7\qrc_recursos.cpp.obj -c C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app\DIArizeCpp_autogen\3YJK5W5UP7\qrc_recursos.cpp
+
+app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.i"
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app\DIArizeCpp_autogen\3YJK5W5UP7\qrc_recursos.cpp > CMakeFiles\DIArizeCpp.dir\DIArizeCpp_autogen\3YJK5W5UP7\qrc_recursos.cpp.i
+
+app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.s"
+	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app\DIArizeCpp_autogen\3YJK5W5UP7\qrc_recursos.cpp -o CMakeFiles\DIArizeCpp.dir\DIArizeCpp_autogen\3YJK5W5UP7\qrc_recursos.cpp.s
+
 # Object files for target DIArizeCpp
 DIArizeCpp_OBJECTS = \
 "CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/mocs_compilation.cpp.obj" \
 "CMakeFiles/DIArizeCpp.dir/src/main.cpp.obj" \
-"CMakeFiles/DIArizeCpp.dir/src/gui/PanelBase.cpp.obj" \
-"CMakeFiles/DIArizeCpp.dir/src/gui/PanelTranscripcion.cpp.obj" \
-"CMakeFiles/DIArizeCpp.dir/src/gui/PanelHistorial.cpp.obj" \
 "CMakeFiles/DIArizeCpp.dir/src/gui/VentanaPrincipal.cpp.obj" \
+"CMakeFiles/DIArizeCpp.dir/src/gui/PanelEnVivo.cpp.obj" \
+"CMakeFiles/DIArizeCpp.dir/src/gui/PantallaCarga.cpp.obj" \
 "CMakeFiles/DIArizeCpp.dir/src/red/ClienteHTTP.cpp.obj" \
-"CMakeFiles/DIArizeCpp.dir/src/red/ClienteTranscriptor.cpp.obj"
+"CMakeFiles/DIArizeCpp.dir/src/red/ClienteTranscriptor.cpp.obj" \
+"CMakeFiles/DIArizeCpp.dir/src/red/ClienteStreaming.cpp.obj" \
+"CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.obj"
 
 # External object files for target DIArizeCpp
 DIArizeCpp_EXTERNAL_OBJECTS =
 
 app/DIArizeCpp.exe: app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/mocs_compilation.cpp.obj
 app/DIArizeCpp.exe: app/CMakeFiles/DIArizeCpp.dir/src/main.cpp.obj
-app/DIArizeCpp.exe: app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelBase.cpp.obj
-app/DIArizeCpp.exe: app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelTranscripcion.cpp.obj
-app/DIArizeCpp.exe: app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelHistorial.cpp.obj
 app/DIArizeCpp.exe: app/CMakeFiles/DIArizeCpp.dir/src/gui/VentanaPrincipal.cpp.obj
+app/DIArizeCpp.exe: app/CMakeFiles/DIArizeCpp.dir/src/gui/PanelEnVivo.cpp.obj
+app/DIArizeCpp.exe: app/CMakeFiles/DIArizeCpp.dir/src/gui/PantallaCarga.cpp.obj
 app/DIArizeCpp.exe: app/CMakeFiles/DIArizeCpp.dir/src/red/ClienteHTTP.cpp.obj
 app/DIArizeCpp.exe: app/CMakeFiles/DIArizeCpp.dir/src/red/ClienteTranscriptor.cpp.obj
+app/DIArizeCpp.exe: app/CMakeFiles/DIArizeCpp.dir/src/red/ClienteStreaming.cpp.obj
+app/DIArizeCpp.exe: app/CMakeFiles/DIArizeCpp.dir/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp.obj
 app/DIArizeCpp.exe: app/CMakeFiles/DIArizeCpp.dir/build.make
 app/DIArizeCpp.exe: C:/Qt/6.11.0/mingw_64/lib/libQt6Widgets.a
-app/DIArizeCpp.exe: C:/Qt/6.11.0/mingw_64/lib/libQt6Network.a
+app/DIArizeCpp.exe: C:/Qt/6.11.0/mingw_64/lib/libQt6Multimedia.a
+app/DIArizeCpp.exe: C:/Qt/6.11.0/mingw_64/lib/libQt6Concurrent.a
+app/DIArizeCpp.exe: C:/Qt/6.11.0/mingw_64/lib/libQt6WebSockets.a
 app/DIArizeCpp.exe: nucleo/libnucleo.a
 app/DIArizeCpp.exe: C:/Qt/6.11.0/mingw_64/lib/libQt6Gui.a
+app/DIArizeCpp.exe: C:/Qt/6.11.0/mingw_64/lib/libQt6Network.a
 app/DIArizeCpp.exe: C:/Qt/6.11.0/mingw_64/lib/libQt6Core.a
 app/DIArizeCpp.exe: C:/Qt/6.11.0/mingw_64/lib/libQt6EntryPoint.a
 app/DIArizeCpp.exe: app/CMakeFiles/DIArizeCpp.dir/linkLibs.rsp
 app/DIArizeCpp.exe: app/CMakeFiles/DIArizeCpp.dir/objects1.rsp
 app/DIArizeCpp.exe: app/CMakeFiles/DIArizeCpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable DIArizeCpp.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable DIArizeCpp.exe"
 	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\DIArizeCpp.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -231,7 +259,7 @@ app/CMakeFiles/DIArizeCpp.dir/clean:
 	cd /d C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app && $(CMAKE_COMMAND) -P CMakeFiles\DIArizeCpp.dir\cmake_clean.cmake
 .PHONY : app/CMakeFiles/DIArizeCpp.dir/clean
 
-app/CMakeFiles/DIArizeCpp.dir/depend:
+app/CMakeFiles/DIArizeCpp.dir/depend: app/DIArizeCpp_autogen/3YJK5W5UP7/qrc_recursos.cpp
 	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\app C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app C:\Users\frand\Desktop\DIARIZE\DIArize_POO_Brachetti_Diaz_Lopardo\cliente_cpp\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\app\CMakeFiles\DIArizeCpp.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : app/CMakeFiles/DIArizeCpp.dir/depend
 

@@ -41,4 +41,19 @@ QByteArray ClienteHTTP::post(const QString& endpoint, QHttpMultiPart* multipart)
     return data;
 }
 
+QByteArray ClienteHTTP::postJson(const QString& endpoint, const QByteArray& json) const {
+    QUrl url(_urlBase + endpoint);
+    QNetworkRequest req = construirRequest(url);
+    req.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+
+    QEventLoop loop;
+    QNetworkReply* reply = _manager.post(req, json);
+    QObject::connect(reply, &QNetworkReply::finished, &loop, &QEventLoop::quit);
+    loop.exec();
+    // Para IA queremos siempre el body, aunque el server haya devuelto 4xx/5xx
+    QByteArray data = reply->readAll();
+    reply->deleteLater();
+    return data;
+}
+
 } // namespace DIArize::Red

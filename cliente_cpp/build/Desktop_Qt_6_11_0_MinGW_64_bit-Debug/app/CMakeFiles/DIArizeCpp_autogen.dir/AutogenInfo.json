@@ -291,6 +291,57 @@
 		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets-relwithdebinfo.cmake",
 		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginAdditionalTargetInfo.cmake",
 		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Network/Qt6NetworkVersionlessAliasTargets.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersion.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersionImpl.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaConfig.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaDependencies.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Concurrent/Qt6ConcurrentConfigVersion.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Concurrent/Qt6ConcurrentConfigVersionImpl.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Concurrent/Qt6ConcurrentConfig.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Concurrent/Qt6ConcurrentDependencies.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Concurrent/Qt6ConcurrentTargetsPrecheck.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Concurrent/Qt6ConcurrentTargets.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Concurrent/Qt6ConcurrentTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Concurrent/Qt6ConcurrentAdditionalTargetInfo.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Concurrent/Qt6ConcurrentVersionlessAliasTargets.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaTargetsPrecheck.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaTargets.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaAdditionalTargetInfo.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaMacros.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaPlugins.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginConfig.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargetsPrecheck.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginAdditionalTargetInfo.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginConfig.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginTargetsPrecheck.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginTargets.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginAdditionalTargetInfo.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaVersionlessAliasTargets.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Concurrent/Qt6ConcurrentConfigVersion.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Concurrent/Qt6ConcurrentConfigVersionImpl.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Concurrent/Qt6ConcurrentConfig.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Concurrent/Qt6ConcurrentDependencies.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Concurrent/Qt6ConcurrentTargetsPrecheck.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Concurrent/Qt6ConcurrentVersionlessAliasTargets.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsConfigVersion.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsConfigVersionImpl.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsConfig.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsDependencies.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsTargetsPrecheck.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsTargets.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsAdditionalTargetInfo.cmake",
+		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsVersionlessAliasTargets.cmake",
 		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/Qt6ConfigVersion.cmake",
 		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
 		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake",
@@ -337,7 +388,8 @@
 		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/QtPublicWindowsHelpers.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
 		"C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/Qt6Dependencies.cmake",
-		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake"
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake",
+		"C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/resources/recursos.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp",
 	"CROSS_CONFIG" : false,
@@ -346,9 +398,27 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/include/gui/PanelEnVivo.h",
+			"MU",
+			"BMPI5EA7AM/moc_PanelEnVivo.cpp",
+			null
+		],
+		[
+			"C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/include/gui/PantallaCarga.h",
+			"MU",
+			"BMPI5EA7AM/moc_PantallaCarga.cpp",
+			null
+		],
+		[
 			"C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/include/gui/VentanaPrincipal.h",
 			"MU",
 			"BMPI5EA7AM/moc_VentanaPrincipal.cpp",
+			null
+		],
+		[
+			"C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/include/red/ClienteStreaming.h",
+			"MU",
+			"CVA3VF47J3/moc_ClienteStreaming.cpp",
 			null
 		]
 	],
@@ -358,11 +428,14 @@
 	"MOC_DEFINITIONS" : 
 	[
 		"MINGW_HAS_SECURE_API=1",
+		"QT_CONCURRENT_LIB",
 		"QT_CORE_LIB",
 		"QT_GUI_LIB",
+		"QT_MULTIMEDIA_LIB",
 		"QT_NEEDS_QMAIN",
 		"QT_NETWORK_LIB",
 		"QT_QML_DEBUG",
+		"QT_WEBSOCKETS_LIB",
 		"QT_WIDGETS_LIB",
 		"UNICODE",
 		"WIN32",
@@ -388,6 +461,9 @@
 		"C:/Qt/6.11.0/mingw_64/include/QtWidgets",
 		"C:/Qt/6.11.0/mingw_64/include/QtGui",
 		"C:/Qt/6.11.0/mingw_64/include/QtNetwork",
+		"C:/Qt/6.11.0/mingw_64/include/QtMultimedia",
+		"C:/Qt/6.11.0/mingw_64/include/QtConcurrent",
+		"C:/Qt/6.11.0/mingw_64/include/QtWebSockets",
 		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++",
 		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32",
 		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward",
@@ -429,17 +505,12 @@
 	"SOURCES" : 
 	[
 		[
-			"C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/src/gui/PanelBase.cpp",
+			"C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/src/gui/PanelEnVivo.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/src/gui/PanelHistorial.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/src/gui/PanelTranscripcion.cpp",
+			"C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/src/gui/PantallaCarga.cpp",
 			"MU",
 			null
 		],
@@ -455,6 +526,11 @@
 		],
 		[
 			"C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/src/red/ClienteHTTP.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/frand/Desktop/DIARIZE/DIArize_POO_Brachetti_Diaz_Lopardo/cliente_cpp/app/src/red/ClienteStreaming.cpp",
 			"MU",
 			null
 		],

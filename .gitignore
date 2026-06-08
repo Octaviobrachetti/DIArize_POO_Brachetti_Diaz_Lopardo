@@ -1,0 +1,30 @@
+# API keys y secretos — NUNCA subir al repo
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.venv/
+dist/
+build/
+*.spec
+
+# C++ / CMake
+cliente_cpp/build/
+*.exe
+*.obj
+*.o
+*.a
+
+# IDE
+.qtcreator/
+.vscode/
+.idea/
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
